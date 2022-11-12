@@ -1,12 +1,12 @@
 {
-  "name": "petarzarkov-portfolio",
-  "description": "Portfolio made with Vite, React, Typescript",
+  "name": "luiscorales-portfolio",
+  "description": "Portafolio made with Vite, React, Typescript",
   "keywords": [
-    "Portfolio, Petar, Zarkov, Vite, React, Typescript"
+    "Portafolio, Luis, Corales, Vite, React, Typescript"
   ],
   "author": {
-    "name": "Petar Zarkov",
-    "email": "pzarko1@gmail.com"
+    "name": "Luis Corales",
+    "email": "lrcorales@gmail.com"
   },
   "private": true,
   "version": "0.0.1",

@@ -1,4 +1,4 @@
-# Petar Zarkov's Portfolio
+# Portafolio Luis Corales #fork - Petar Zarkov's Portfolio
 
 ## Showcasing
 
@@ -12,7 +12,7 @@
 
 ### Requirements
 
-- NodeJS >= 14.x.x
+- NodeJS >= 14.x.x (recomiendo el ultimo)
 
 ### Setup
 
@@ -28,4 +28,5 @@ npm start
 
 ### Demo
 
-<a href="http://petarzarkov.com/" target="_blank">Preview</a>
+<a href="http://petarzarkov.com/" target="_blank">Petar Zarkov</a>
+<a href="https://sabas-soft.com" target="_blank">Luis Corales</a> 
