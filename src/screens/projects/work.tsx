@@ -9,7 +9,7 @@ const RoleCard: FC<{ role: string }> = ({ role }) => {
   return <VStack textAlign={"center"} color={useColorModeValue("primary.300", "primary.500")}>
     <CgProfile size={35} />
     <Text fontWeight='bold'>
-            Role
+            Rol
       <Badge colorScheme={theme}>
         {role}
       </Badge>
@@ -19,9 +19,9 @@ const RoleCard: FC<{ role: string }> = ({ role }) => {
 
 export const work = (isFrameLoading: boolean, setFrameLoading: (l: boolean) => void): (Parameters<typeof Project>[0])[] => [
   {
-    title: "🚀 Rocket Crash",
-    subTitle: "Game Engine",
-    description: "Jump on a rocket with other players and see how far you can go before the rocket explodes.",
+    title: "🚀 Sabas POS",
+    subTitle: "Sistema POS",
+    description: "Sabas POS es un ERP (por sus siglas en ingles ‘Planificación de Recursos Empresariales’) es un conjunto de aplicaciones de software integradas + POS (punto de venta)",
     devStack: [
       Libs.NodeJS.icon, Libs.Typescript.icon, Libs.JavaScript.icon, SecondaryLibs.Postgres.icon,
       SecondaryLibs.Koa.icon, SecondaryLibs.html.icon, SecondaryLibs.css.icon, SecondaryLibs.ESLint.icon,
@@ -32,15 +32,15 @@ export const work = (isFrameLoading: boolean, setFrameLoading: (l: boolean) => v
     features: [
       {
         icon: <RoleCard role={"Lead Dev"} />,
-        content: <Text fontWeight={600}>Managed the project from start to finish including FE, BE, Automation with Cucumber, and CI/CD.</Text>
+        content: <Text fontWeight={600}>Desarrollador del proyecto desde el principio hasta la fecha.</Text>
       },
       {
         icon: <CiLibs.BitBucket.icon />,
-        content: <Text fontWeight={600}>Monorepo distributed with Docker + Octo + BitBucket + Bamboo</Text>
+        content: <Text fontWeight={600}>Manejo de MySQL como motor de base de datos y HeidiSQL como IDE</Text>
       },
       {
         icon: <SecondaryLibs.Sequelize.icon />,
-        content: <Text fontWeight={600}>Sequelize: used for DB migrations, layer over PostgeSQL + MySQL, and Object-Relational Mapping</Text>
+        content: <Text fontWeight={600}>POSTMAN para pruebas de consumo de API</Text>
       },
     ].map((feature, indx) => <Feature key={`${indx}-rocket-feature`} {...feature} />),
     previewImg: "images/rocket.gif",
@@ -56,7 +56,7 @@ export const work = (isFrameLoading: boolean, setFrameLoading: (l: boolean) => v
         <iframe
           style={{ borderRadius: 15 }}
           onLoad={() => setFrameLoading(false)}
-          src="https://www.youtube.com/embed/qQLsUaXShnE"
+          src="https://www.youtube.com/embed/i_fvKbrkJ94"
           title="How to play rocket"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

@@ -14,10 +14,10 @@ export const NotFound: FC = () => {
         404
       </Heading>
       <Text fontSize="18px" mt={3} mb={2}>
-        Page Not Found
+        Página no eoncontrada
       </Text>
       <Text color={"primary.500"} mb={6}>
-        The page you are looking for does not seem to exist
+        La página que busca no parece existir
       </Text>
 
       <Button
@@ -27,7 +27,7 @@ export const NotFound: FC = () => {
         bgGradient="linear(to-r, blue.400, blue.500, blue.600)"
         color="white"
         variant="solid">
-        Go to Home
+        Ir al inicio
       </Button>
     </Box>
   );

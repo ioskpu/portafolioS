@@ -45,8 +45,8 @@ export const Contact = () => {
   return (
     <Box>
       <Title
-        title={"Get in Touch"}
-        subTitle={"Email me or contact me on any of my social links."}
+        title={"Mantente en contacto"}
+        subTitle={"escribeme o contactame en cualquiera de mis redes sociales."}
       />
       {showModal.show &&
       <BaseModal title="Email" content={showModal.response} isOpen={showModal.show} onClose={() => setShowModal({ show: false })} />}
@@ -59,7 +59,7 @@ export const Contact = () => {
             justify="space-around"
             direction={{ base: "row", md: "column" }}>
             <Tooltip
-              label={hasCopied ? "Email Copied!" : "Copy Email"}
+              label={hasCopied ? "Email Copiado!" : "Copiar Email"}
               closeOnClick={false}
               hasArrow>
               <IconButton
@@ -97,12 +97,12 @@ export const Contact = () => {
                   <Field name='name'>
                     {({ field }: { field: unknown }) => (
                       <FormControl isRequired marginBottom={5}>
-                        <FormLabel htmlFor='name'>Name</FormLabel>
+                        <FormLabel htmlFor='name'>Nombre</FormLabel>
                         <InputGroup>
                           <InputLeftElement>
                             <BsPerson />
                           </InputLeftElement>
-                          <Input {...field} type="text" id="name" placeholder="Your Name" />
+                          <Input {...field} type="text" id="name" placeholder="Tú nombre" />
                         </InputGroup>
                       </FormControl>
                     )}
@@ -119,7 +119,7 @@ export const Contact = () => {
                             {...field}
                             id="email"
                             type="email"
-                            placeholder="Your Email"
+                            placeholder="Tú Email"
                           />
                         </InputGroup>
                       </FormControl>
@@ -128,11 +128,11 @@ export const Contact = () => {
                   <Field name='message'>
                     {({ field }: { field: unknown }) => (
                       <FormControl isRequired marginBottom={5}>
-                        <FormLabel>Message</FormLabel>
+                        <FormLabel>Mensaje</FormLabel>
                         <Textarea
                           {...field}
                           id="message"
-                          placeholder="Your Message"
+                          placeholder="Tú mensaje"
                           rows={6}
                           resize="none"
                         />
@@ -149,7 +149,7 @@ export const Contact = () => {
                       bg: useColorModeValue("primary.200", "primary.400"),
                     }}
                     isFullWidth>
-                    Send Message
+                    Enviar mensaje
                   </Button>
                 </Form>
               )}

@@ -67,15 +67,15 @@ export const Skills: FC = () => {
   return (
     <Tabs isFitted variant='enclosed' colorScheme={theme}>
       <TabList >
-        <CustomTab title={"Primary"} />
-        <CustomTab title={"Secondary"} />
+        <CustomTab title={"Primario"} />
+        <CustomTab title={"Secundario"} />
         <CustomTab title={"CI/CD"} />
       </TabList>
       <TabPanels>
         {[
-          { title: "Primary", sub: "Programming languages and supersets.", skills: skills },
-          { title: "Secondary", sub: "Libraries, packages, tools.", skills: skillsSecondary },
-          { title: "CI/CD", sub: "Continuous Integration, Continuous Delivery, Continuous Deployment.", skills: skillsCI }
+          { title: "Primario", sub: "Lenguajes de programación y superconjuntos.", skills: skills },
+          { title: "Secundario", sub: "Bibliotecas, paquetes, herramientas.", skills: skillsSecondary },
+          { title: "CI/CD", sub: "Integración Continua, Entrega Continua, Despliegue Continuo.", skills: skillsCI }
         ].map((panel, indx) =>
           <TabPanel key={`${panel.title}-${indx}`} minH="80vh">
             <Title

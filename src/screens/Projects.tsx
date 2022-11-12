@@ -15,12 +15,12 @@ export const Projects: FC = () => {
   return (
     <Box>
       <Title
-        title={"Projects"}
-        subTitle={"Showcasing some of my projects."}
+        title={"Proyectos"}
+        subTitle={"Mostrando algunos de mis proyectos."}
       />
       <Tabs isFitted variant='enclosed' colorScheme={theme}>
         <TabList>
-          <CustomTab title={"Work"} />
+          <CustomTab title={"Trabajo"} />
           <CustomTab title={"Hobby"} />
         </TabList>
         <TabPanels>
