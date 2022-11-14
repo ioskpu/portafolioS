@@ -65,6 +65,7 @@ export const Libs = {
   Csharp: { icon: () => <Icon as={SiCsharp} w={10} h={10} color={"blue.700"} />, level: 1, title: "C#" },
   Cpp: { icon: () => <Icon as={SiCplusplus} w={10} h={10} color={"blue.700"} />, level: 1, title: "C++" },
   GO: { icon: () => <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/215px-Go_Logo_Blue.svg.png" />, level: 1 },
+  PHP: { icon: () => <Image w={10} h={10} scr="https://pngimg.com/uploads/php/php_PNG10.png"/>, level: 2},
 };
 
 export const SecondaryLibs = {

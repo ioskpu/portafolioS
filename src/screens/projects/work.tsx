@@ -19,15 +19,12 @@ const RoleCard: FC<{ role: string }> = ({ role }) => {
 
 export const work = (isFrameLoading: boolean, setFrameLoading: (l: boolean) => void): (Parameters<typeof Project>[0])[] => [
   {
-    title: "🚀 Sabas POS",
+    title: "Sabas POS",
     subTitle: "Sistema POS",
     description: "Sabas POS es un ERP (por sus siglas en ingles ‘Planificación de Recursos Empresariales’) es un conjunto de aplicaciones de software integradas + POS (punto de venta)",
     devStack: [
-      Libs.NodeJS.icon, Libs.Typescript.icon, Libs.JavaScript.icon, SecondaryLibs.Postgres.icon,
-      SecondaryLibs.Koa.icon, SecondaryLibs.html.icon, SecondaryLibs.css.icon, SecondaryLibs.ESLint.icon,
-      SecondaryLibs.MySQL.icon, SecondaryLibs.Redis.icon, SecondaryLibs.CucumberJS.icon, SecondaryLibs.npm.icon, SecondaryLibs.Jest.icon,
-      CiLibs.DataDog.icon, CiLibs.OctopusDeploy.icon, CiLibs.Jira.icon,
-      CiLibs.Bamboo.icon, CiLibs.BitBucket.icon, CiLibs.Confluence.icon,
+      Libs.NodeJS.icon, Libs.JavaScript.icon, SecondaryLibs.MySQL.icon,
+      SecondaryLibs.html.icon, SecondaryLibs.css.icon, SecondaryLibs.ESLint.icon, SecondaryLibs.Redis.icon, SecondaryLibs.npm.icon, Libs.PHP.icon,
     ].map((devIcon, indx) => React.createElement(devIcon, { key: `${indx}-rocket-dev-stack` })),
     features: [
       {
@@ -43,8 +40,8 @@ export const work = (isFrameLoading: boolean, setFrameLoading: (l: boolean) => v
         content: <Text fontWeight={600}>POSTMAN para pruebas de consumo de API</Text>
       },
     ].map((feature, indx) => <Feature key={`${indx}-rocket-feature`} {...feature} />),
-    previewImg: "images/rocket.gif",
-    preview: <AspectRatio w={{ base: isFrameLoading ? 400 : 256, md: 400, lg: 400 }} h={{ base: isFrameLoading ? 400 : 256, md: isFrameLoading ? 400 : 600, lg: isFrameLoading ? 400 : 600 }}>
+    previewImg: "images/sabasp.gif",
+    preview: <AspectRatio w={{ base: isFrameLoading ? 300 : 256, md: 300, lg: 500 }} h={{ base: isFrameLoading ? 350 : 256, md: isFrameLoading ? 300 : 350, lg: isFrameLoading ? 300 : 350 }}>
       <>
         {isFrameLoading && <Spinner
           thickness='4px'
@@ -57,7 +54,7 @@ export const work = (isFrameLoading: boolean, setFrameLoading: (l: boolean) => v
           style={{ borderRadius: 15 }}
           onLoad={() => setFrameLoading(false)}
           src="https://www.youtube.com/embed/i_fvKbrkJ94"
-          title="How to play rocket"
+          title="SabasPOS"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
