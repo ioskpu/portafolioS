@@ -76,7 +76,7 @@ export const NavBar: FC = () => {
                 borderStyle={"groove"}
                 size={"sm"}
                 src={
-                  "images/avatar.jpg"
+                  "images/avatar.png"
                 }
               />
             </MenuButton>
@@ -98,7 +98,7 @@ export const NavBar: FC = () => {
       <Drawer placement={"top"} onClose={palOnClose} isOpen={isPalOpen}>
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerHeader borderBottomWidth='1px' backgroundColor={useColorModeValue(`${theme}.300`, `${theme}.500`)}>Pick your theme</DrawerHeader>
+          <DrawerHeader borderBottomWidth='1px' backgroundColor={useColorModeValue(`${theme}.300`, `${theme}.500`)}>Elige el tema ;)</DrawerHeader>
           <DrawerCloseButton />
           <DrawerBody>
             <Box>

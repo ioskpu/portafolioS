@@ -51,7 +51,7 @@ const Card: FC<
             borderStyle={"groove"}
             size={avatarSize}
             src={
-              "images/avatar.jpg"
+              "images/avatar.png"
             }
             title={name}
           />
@@ -118,7 +118,7 @@ export const Profile: FC = () => {
           fontSize={"xl"}
           pb={1}
           fontWeight={"bold"}>
-            Current Focuses
+            Enfoques actuales
         </chakra.h1>
         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
           {stats.map(({ stat, title, icon }, index) => <StatsCard key={`${title}-${index}`} title={title} stat={stat} icon={icon} />)}

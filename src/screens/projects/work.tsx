@@ -20,7 +20,7 @@ const RoleCard: FC<{ role: string }> = ({ role }) => {
 export const work = (isFrameLoading: boolean, setFrameLoading: (l: boolean) => void): (Parameters<typeof Project>[0])[] => [
   {
     title: "Sabas POS",
-    subTitle: "Sistema POS",
+    subTitle: "Sistema ERP",
     description: "Sabas POS es un ERP (por sus siglas en ingles ‘Planificación de Recursos Empresariales’) es un conjunto de aplicaciones de software integradas + POS (punto de venta)",
     devStack: [
       Libs.NodeJS.icon, Libs.JavaScript.icon, SecondaryLibs.MySQL.icon,
@@ -63,9 +63,9 @@ export const work = (isFrameLoading: boolean, setFrameLoading: (l: boolean) => v
     </AspectRatio>
   },
   {
-    title: "🎲 Over Under",
-    subTitle: "Game Engine",
-    description: "Roll a die within a configurable range and bet a target over or under the roll.",
+    title: "🎲 Game Over",
+    subTitle: "Video Juegos",
+    description: "Game Over es una Single Page Application (SPA), hecha como trabajo de PI soyHenry",
     devStack: [
       Libs.Python.icon,
       SecondaryLibs.Postgres.icon, SecondaryLibs.html.icon, SecondaryLibs.css.icon, SecondaryLibs.Redis.icon,
@@ -75,10 +75,7 @@ export const work = (isFrameLoading: boolean, setFrameLoading: (l: boolean) => v
       {
         icon: <RoleCard role={"Lead Dev"} />,
         content: <Text fontWeight={600}>
-                    Managed the project from start to finish including FE, BE, and CI/CD.
-                    Pytest was used for complete unit test coverage.
-                    AWS for billions of simulations to meet regulator standards.
-                    Extra Stack: pyramid, venv
+                    VideoGames es una Single Page Application utlizando las tecnologías: React, Redux, Node, Express y Sequelize, hecha como trabajo de PI soyHenry
         </Text>
       },
       {
@@ -86,7 +83,26 @@ export const work = (isFrameLoading: boolean, setFrameLoading: (l: boolean) => v
         content: <Text fontWeight={600}>Repo distributed with Docker + Octo + BitBucket + Bamboo</Text>
       }
     ].map((feature, indx) => <Feature key={`${indx}-ou-feature`} {...feature} />),
-    previewImg: "images/dice.jpg",
+    preview: <AspectRatio w={{ base: isFrameLoading ? 300 : 256, md: 300, lg: 500 }} h={{ base: isFrameLoading ? 350 : 256, md: isFrameLoading ? 300 : 350, lg: isFrameLoading ? 300 : 350 }}>
+      <>
+        {isFrameLoading && <Spinner
+          thickness='4px'
+          speed='1.85s'
+          emptyColor='primary.200'
+          color='primary.500'
+          size='xs'
+        />}
+        <iframe
+          style={{ borderRadius: 15 }}
+          onLoad={() => setFrameLoading(false)}
+          src="https://www.youtube.com/embed/ZFy69GDPOKI"
+          title="SabasPOS"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </>
+    </AspectRatio>
   },
   {
     title: "🎰 Casino Products",

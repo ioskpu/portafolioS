@@ -75,7 +75,7 @@ export const Skills: FC = () => {
         {[
           { title: "Primario", sub: "Lenguajes de programación y superconjuntos.", skills: skills },
           { title: "Secundario", sub: "Bibliotecas, paquetes, herramientas.", skills: skillsSecondary },
-          { title: "CI/CD", sub: "Integración Continua, Entrega Continua, Despliegue Continuo.", skills: skillsCI }
+          { title: "CI/CD (Aprendiendo)", sub: "Integración Continua, Entrega Continua, Despliegue Continuo.", skills: skillsCI }
         ].map((panel, indx) =>
           <TabPanel key={`${panel.title}-${indx}`} minH="80vh">
             <Title

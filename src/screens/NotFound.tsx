@@ -14,7 +14,7 @@ export const NotFound: FC = () => {
         404
       </Heading>
       <Text fontSize="18px" mt={3} mb={2}>
-        Página no eoncontrada
+        Página no encontrada
       </Text>
       <Text color={"primary.500"} mb={6}>
         La página que busca no parece existir
