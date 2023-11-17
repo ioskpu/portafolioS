@@ -3,9 +3,10 @@ import { portfolio } from "@config";
 import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { IconLink as IconLinkBase } from "@components";
 import { Flex, Icon as IconBase, Image as ImageBase, useColorModeValue } from "@chakra-ui/react";
+
 import {
-  SiTypescript, SiReact, SiCsharp, SiJavascript, SiDatadog, SiSequelize,
-  SiNextdotjs, SiNestjs, SiPostgresql, SiSocketdotio, SiDocker, SiKubernetes, SiDotnet,
+  SiTypescript, SiPostman, SiReact, SiCsharp, SiJavascript, SiDatadog, SiSequelize, SiPhp, SiRedux,
+  SiNextdotjs, SiNestjs, SiPostgresql, SiSocketdotio, SiDocker, SiKubernetes, SiDotnet, SiVercel,
   SiCucumber, SiPrisma, SiEslint, SiOctopusdeploy, SiBamboo, SiBitbucket, SiCplusplus, SiExpress, SiHtml5, SiCss3, SiConfluence, SiJira, SiFastify, SiSwagger
 } from "react-icons/si";
 import { IoLogoNodejs } from "react-icons/io";
@@ -94,6 +95,10 @@ export const SecondaryLibs = {
 };
 
 export const CiLibs = {
+  Redux: { icon: () => <IconLink icon={<Icon as={SiRedux} w={10} h={10} color={"purple.600"} />} to= {"https://redux.js.org/"}/>, level: 4 },
+  Vercel: { icon: () => <Icon as={SiVercel} w={10} h={10} color={"blue.600"} />, level: 4 },
+  Php: { icon: () => <Icon as={SiPhp} w={10} h={10} color={"blue.600"} />, level: 4 },
+  Postman: { icon: () => <Icon as={SiPostman} w={10} h={10} color={"orange.500"} />, level: 3 },
   DataDog: { icon: () => <Icon as={SiDatadog} w={10} h={10} color={"purple.600"} />, level: 3 },
   Docker: { icon: () => <Icon as={SiDocker} w={10} h={10} color={"blue.400"} />, level: 4 },
   Kubernetes: { icon: () => <Icon as={SiKubernetes} w={10} h={10} color={"blue.600"} />, level: 3 },

@@ -23,8 +23,8 @@ export const work = (isFrameLoading: boolean, setFrameLoading: (l: boolean) => v
     subTitle: "Sistema ERP",
     description: "Sabas POS es un ERP (por sus siglas en ingles ‘Planificación de Recursos Empresariales’) es un conjunto de aplicaciones de software integradas + POS (punto de venta)",
     devStack: [
-      Libs.NodeJS.icon, Libs.JavaScript.icon, SecondaryLibs.MySQL.icon,
-      SecondaryLibs.html.icon, SecondaryLibs.css.icon, SecondaryLibs.ESLint.icon, SecondaryLibs.Redis.icon, SecondaryLibs.npm.icon, Libs.PHP.icon,
+      Libs.JavaScript.icon, SecondaryLibs.MySQL.icon,
+      SecondaryLibs.html.icon, SecondaryLibs.css.icon, SecondaryLibs.ESLint.icon, CiLibs.Php.icon,
     ].map((devIcon, indx) => React.createElement(devIcon, { key: `${indx}-rocket-dev-stack` })),
     features: [
       {
@@ -32,11 +32,11 @@ export const work = (isFrameLoading: boolean, setFrameLoading: (l: boolean) => v
         content: <Text fontWeight={600}>Desarrollador del proyecto desde el principio hasta la fecha.</Text>
       },
       {
-        icon: <CiLibs.BitBucket.icon />,
-        content: <Text fontWeight={600}>Manejo de MySQL como motor de base de datos y HeidiSQL como IDE</Text>
+        icon: <SecondaryLibs.MySQL.icon />,
+        content: <Text fontWeight={600}>MySQL base de datos</Text>
       },
       {
-        icon: <SecondaryLibs.Sequelize.icon />,
+        icon: <CiLibs.Postman.icon />,
         content: <Text fontWeight={600}>POSTMAN para pruebas de consumo de API</Text>
       },
     ].map((feature, indx) => <Feature key={`${indx}-rocket-feature`} {...feature} />),
@@ -67,20 +67,20 @@ export const work = (isFrameLoading: boolean, setFrameLoading: (l: boolean) => v
     subTitle: "Video Juegos",
     description: "Game Over es una Single Page Application (SPA), hecha como trabajo de PI soyHenry",
     devStack: [
-      Libs.Python.icon,
-      SecondaryLibs.Postgres.icon, SecondaryLibs.html.icon, SecondaryLibs.css.icon, SecondaryLibs.Redis.icon,
-      CiLibs.OctopusDeploy.icon, CiLibs.Jira.icon, CiLibs.Bamboo.icon, CiLibs.BitBucket.icon, CiLibs.Confluence.icon, CiLibs.AWS.icon,
+      Libs.JavaScript.icon,
+      SecondaryLibs.Postgres.icon, SecondaryLibs.html.icon, SecondaryLibs.css.icon, SecondaryLibs.Express.icon,
+      SecondaryLibs.ESLint.icon, Libs.React.icon, Libs.NodeJS.icon, CiLibs.Redux.icon, SecondaryLibs.Sequelize.icon
     ].map((devIcon, indx) => React.createElement(devIcon, { key: `${indx}-ou-dev-stack` })),
     features: [
       {
         icon: <RoleCard role={"Lead Dev"} />,
         content: <Text fontWeight={600}>
-                    VideoGames es una Single Page Application utlizando las tecnologías: React, Redux, Node, Express y Sequelize, hecha como trabajo de PI soyHenry
+                    VideoGames es una Single Page Application utilizando las tecnologías: React, Redux, Node, Express y Sequelize, hecha como trabajo de PI soyHenry
         </Text>
       },
       {
-        icon: <CiLibs.BitBucket.icon />,
-        content: <Text fontWeight={600}>Repo distributed with Docker + Octo + BitBucket + Bamboo</Text>
+        icon: <CiLibs.Vercel.icon />,
+        content: <Text fontWeight={600}>Repo distributed Vercel + Railway + Neon</Text>
       }
     ].map((feature, indx) => <Feature key={`${indx}-ou-feature`} {...feature} />),
     preview: <AspectRatio w={{ base: isFrameLoading ? 300 : 256, md: 300, lg: 500 }} h={{ base: isFrameLoading ? 350 : 256, md: isFrameLoading ? 300 : 350, lg: isFrameLoading ? 300 : 350 }}>
