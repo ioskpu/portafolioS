@@ -3,6 +3,7 @@ import {
   Stack, Flex, Text, Container, HStack,
   SimpleGrid, StackDivider, useColorModeValue, Image, VStack
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { Title } from "@components";
 
 export const Project: FC<{
@@ -59,6 +60,7 @@ export const Project: FC<{
               <VStack
                 divider={<StackDivider borderColor={useColorModeValue("primary.300", "primary.700")} />}
               >
+                <a href="https://game-over-nine.vercel.app/" target="_blank" rel="noopener noreferrer">
                 <Image
                   rounded={"md"}
                   alt={"feature image"}
@@ -67,18 +69,22 @@ export const Project: FC<{
                   }
                   objectFit={"cover"}
                 />
+                </a>
                 {preview}
               </VStack>
               : preview
             :
+            <a href="https://game-over-nine.vercel.app/" target="_blank" rel="noopener noreferrer">
             <Image
               rounded={"md"}
               alt={"feature image"}
               src={
-                previewImg || "images/img5.jpg"
+                previewImg || "images/slots.png"
               }
               objectFit={"cover"}
-            />}
+            />
+            </a>
+            }
         </Flex>
       </SimpleGrid>
     </Container>
