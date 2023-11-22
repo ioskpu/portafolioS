@@ -4,8 +4,9 @@ import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { IconLink as IconLinkBase } from "@components";
 import { Flex, Icon as IconBase, Image as ImageBase, useColorModeValue } from "@chakra-ui/react";
 
+//
 import {
-  SiTypescript, SiPostman, SiReact, SiCsharp, SiJavascript, SiDatadog, SiSequelize, SiPhp, SiRedux,
+  SiTypescript, SiPostman, SiReact, SiCsharp, SiJavascript, SiDatadog, SiSequelize, SiPhp, SiRedux, SiSqlite,
   SiNextdotjs, SiNestjs, SiPostgresql, SiSocketdotio, SiDocker, SiKubernetes, SiDotnet, SiVercel,SiLaravel,
   SiCucumber, SiPrisma, SiEslint, SiOctopusdeploy, SiBamboo, SiBitbucket, SiCplusplus, SiExpress, SiHtml5, SiCss3, SiConfluence, SiJira, SiFastify, SiSwagger
 } from "react-icons/si";
@@ -70,10 +71,10 @@ export const Libs = {
 };
 
 export const SecondaryLibs = {
+  Knex: { icon: () => <IconLink icon={<Image w={10} src="images/knex.png" />} to={"https://knexjs.org/"} />, level: 4 },
   CucumberJS: { icon: () => <IconLink icon={<Icon as={SiCucumber} w={10} h={10} color={"green.500"} />} to={"https://cucumber.io/docs/installation/javascript/"} />, level: 4 },
   Sequelize: { icon: () => <IconLink icon={<Icon as={SiSequelize} w={10} h={10} color={"blue.400"} />} to={"https://sequelize.org/"} />, level: 4 },
   Prisma: { icon: () => <Icon as={SiPrisma} w={10} h={10} color={"blue.800"} />, level: 2 },
-  NextJS: { icon: () => <Icon as={SiNextdotjs} w={10} h={10} color={"gray.600"} />, level: 1 },
   NestJS: { icon: () => <Icon as={SiNestjs} w={10} h={10} color={"red.600"} />, level: 1 },
   Fastify: { icon: () => <IconLink icon={<Icon as={SiFastify} w={10} h={10} color={"gray.600"} />} to={"https://www.fastify.io/"} />, level: 3 },
   MySQL: { icon: () => <IconLink icon={<Icon as={GrMysql} w={10} h={10} color={"blue.500"} />} to={"https://www.mysql.com/"} />, level: 3 },
@@ -95,6 +96,8 @@ export const SecondaryLibs = {
 };
 //https://laravel.com/docs/10.x/readme
 export const CiLibs = {
+  Sqlite: { icon: () => <IconLink icon={<Icon as={SiSqlite} w={10} h={10} color={"purple.600"} />} to= {"https://www.sqlite.org/"} />, level: 4 },
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   Laravel: { icon: () => <IconLink icon={<Icon as={SiLaravel} w={10} h={10} color={"red.600"} />} to= {"https://laravel.com/"}/>, level: 4 },
   Redux: { icon: () => <IconLink icon={<Icon as={SiRedux} w={10} h={10} color={"purple.600"} />} to= {"https://redux.js.org/"}/>, level: 4 },
   Vercel: { icon: () => <Icon as={SiVercel} w={10} h={10} color={"blue.600"} />, level: 4 },

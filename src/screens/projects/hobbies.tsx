@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useState } from "react";
 import ReactJson from "react-json-view";
 import { AspectRatio, Spinner, Code, Flex, VStack, Text, Button, Container, useColorModeValue, Box } from "@chakra-ui/react";
-import { Project, Libs, SecondaryLibs, Feature, Socials, ExternalLink } from "@components";
+import { Project, Libs, SecondaryLibs, Feature, Socials, ExternalLink, CiLibs } from "@components";
 
 const Trivia: FC = () => {
   const [questions, setQ] = useState<Record<string, unknown>[]>([]);
@@ -81,29 +81,28 @@ export const hobbies = (isFrameLoading: boolean, setFrameLoading: (l: boolean) =
     preview: <Trivia />
   },
   {
-    title: "💫 Wisdoms App",
+    title: "💫 Quotes App",
     subTitle: "API",
-    description: "NodeJS + Koa API + simple html, developed to spew jokes in english/bulgarian.",
+    description: "NodeJS + Knex + simple html, developed to display inspirational quotes",
     devStack: [
       <Libs.NodeJS.icon key={"NodeW"} />,
-      <Libs.Typescript.icon key={"TSW"} />,
       <Libs.JavaScript.icon key={"JSW"} />,
-      <SecondaryLibs.Postgres.icon key={"PGW"} />,
-      <SecondaryLibs.Koa.icon key={"KoaW"} />,
+      <CiLibs.Sqlite.icon key={"SqliteW"} />,
+      <SecondaryLibs.Knex.icon key={"KnexW"} />,
       <SecondaryLibs.html.icon key={"htmlW"} />,
       <SecondaryLibs.css.icon key={"cssW"} />,
       <SecondaryLibs.ESLint.icon key={"EslintW"} />,
     ],
     features: [
       <Feature
-        key={"WisdomsRepo"}
-        icon={<Socials.GitHub to={"https://github.com/petarzarkov/wisdoms"} />}
-        content={<ExternalLink to={"https://github.com/petarzarkov/wisdoms"} text={"repo"} />}
+        key={"QuotesRepo"}
+        icon={<Socials.GitHub to={"https://github.com/ioskpu/quotes-api"} />}
+        content={<ExternalLink to={"https://github.com/ioskpu/quotes-api"} text={"repo"} />}
       />,
       <Feature
-        key={"SequelizeWisdoms"}
-        icon={<SecondaryLibs.Sequelize.icon />}
-        content={<Text fontWeight={600}>Sequelize: used for DB migrations, layer over PostgeSQL, and Object-Relational Mapping</Text>}
+        key={"NodeJSQuotes"}
+        icon={<Libs.NodeJS.icon />}
+        content={<Text fontWeight={600}>NodeJS: used to create server-side web applications, and it is perfect for data-intensive applications since it uses an asynchronous, event-driven mode</Text>}
       />
     ],
     preview: <AspectRatio w={400} h={isFrameLoading ? 400 : 600}>
@@ -115,7 +114,7 @@ export const hobbies = (isFrameLoading: boolean, setFrameLoading: (l: boolean) =
           color='primary.500'
           size='xs'
         />}
-        <iframe src='https://wisdoms-app.herokuapp.com/' style={{ borderRadius: 15 }} onLoad={() => setFrameLoading(false)} scrolling="no"/>
+        <iframe src='https://quotes-api-pi.vercel.app/' style={{ borderRadius: 15 }} onLoad={() => setFrameLoading(false)} scrolling="yes"/>
       </>
     </AspectRatio>
   },
