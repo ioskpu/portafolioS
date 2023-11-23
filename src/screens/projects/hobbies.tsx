@@ -9,7 +9,7 @@ const Trivia: FC = () => {
   const getQuestions = async () => {
     try {
       setLoading(true);
-      const raw = await fetch("https://trivia-art.herokuapp.com/api/questions", {
+      const raw = await fetch("https://the-trivia-api.com/v2/quizzes", {
         headers: {
           Accept: "application/json"
         }
@@ -30,7 +30,7 @@ const Trivia: FC = () => {
   }, []);
 
   return (
-    <Container bgColor={useColorModeValue("primary.300", "primary.700")} borderRadius={10}>
+    <Container bgColor={useColorModeValue("primary.300", "primary.700")} borderRadius={10} p={4}>
       <Button onClick={() => void getQuestions()} isLoading={isLoading} m={5}>New questions</Button>
       <Box>
         {isLoading ? <Spinner
@@ -49,36 +49,44 @@ const Trivia: FC = () => {
 
 export const hobbies = (isFrameLoading: boolean, setFrameLoading: (l: boolean) => void): (Parameters<typeof Project>[0])[] => [
   {
-    title: "❔ Trivia Art",
+    title: "❔ Quizinator",
     subTitle: "API",
-    description: "Over 9k+ unique trivia questions",
+    description: "10 random questions to test you are a dummy.",
     devStack: [
-      Libs.NodeJS.icon, Libs.Typescript.icon, Libs.JavaScript.icon, SecondaryLibs.Postgres.icon,
-      SecondaryLibs.Fastify.icon, SecondaryLibs.ESLint.icon, SecondaryLibs.Redis.icon
+      Libs.JavaScript.icon, SecondaryLibs.ESLint.icon, Libs.React.icon, CiLibs.ReactBootstrap.icon
     ].map((devIcon, indx) => React.createElement(devIcon, { key: `${indx}-rocket-dev-stack` })),
     features: [
       <Feature
-        key={"TriviaRepo"}
-        icon={<Socials.GitHub to={"https://github.com/petarzarkov/trivia-art"} />}
-        content={<ExternalLink to={"https://github.com/petarzarkov/trivia-art"} text={"repo"} />}
+        key={"QuizRepo"}
+        icon={<Socials.GitHub to={"https://github.com/ioskpu/opentrivia"} />}
+        content={<ExternalLink to={"https://github.com/ioskpu/opentrivia"} text={"repo"} />}
       />,
       <Feature
-        key={"TrSQ"}
-        icon={<SecondaryLibs.Sequelize.icon />}
-        content={<Text fontWeight={600}>Sequelize: used for DB migrations, layer over PostgeSQL, and Object-Relational Mapping</Text>}
+        key={"TrReact"}
+        icon={<Libs.React.icon />}
+        content={<Text fontWeight={600}>React: a JavaScript library for building user interfaces</Text>}
       />,
       <Feature
-        key={"TrFast"}
-        icon={<SecondaryLibs.Fastify.icon />}
-        content={<Text fontWeight={600}>Fastify: used for its low-overhead server, routes, validations, and auth</Text>}
+        key={"TrAxios"}
+        icon={<CiLibs.Axios.icon />}
+        content={<Text fontWeight={600}>Axios is a JS lib. used to make HTTP requests from nodejs or XMLHttpRequests from the browser and it supports the Promise API that is native to JS ES6</Text>}
       />,
-      <Feature
-        key={"TrSwag"}
-        icon={<SecondaryLibs.Swagger.icon />}
-        content={<ExternalLink to={"https://trivia-art.herokuapp.com/documentation"} text={"Swagger Docs"} />}
-      />
+      
     ],
-    preview: <Trivia />
+    preview: (
+      <AspectRatio w={600} h={isFrameLoading ? 600 : 800}>
+        <>
+          {isFrameLoading && <Spinner
+            thickness='4px'
+            speed='1.85s'
+            emptyColor='primary.200'
+            color='primary.500'
+            size='xs'
+          />}
+          <iframe src='https://opentrivia-nine.vercel.app/' style={{ borderRadius: 15 }} onLoad={() => setFrameLoading(false)} scrolling="yes"/>
+        </>
+      </AspectRatio>
+    )
   },
   {
     title: "💫 Quotes App",
@@ -161,29 +169,5 @@ export const hobbies = (isFrameLoading: boolean, setFrameLoading: (l: boolean) =
       </VStack>
     </Flex>
   },
-  {
-    title: "🕹️ Impossible Quiz",
-    subTitle: "android app",
-    description: "Developed with React Native. Over 4000 Trivia Questions",
-    devStack: [
-      <Libs.NodeJS.icon key={"NodeIQ"} />,
-      <Libs.ReactNative.icon key={"rnIQ"} />,
-      <Libs.Typescript.icon key={"TSIQ"} />,
-      <Libs.JavaScript.icon key={"JSIQ"} />,
-      <SecondaryLibs.ESLint.icon key={"EslintIQ"} />,
-    ],
-    features: [
-      <Feature
-        key={"IQGplay"}
-        icon={<SecondaryLibs.GooglePlay.icon to={"https://play.google.com/store/apps/details?id=com.impossiblequiz"} />}
-        content={<ExternalLink to={"https://play.google.com/store/apps/details?id=com.impossiblequiz"} text={"Get it on Google Play"} />}
-      />,
-      <Feature
-        key={"IQRepo"}
-        icon={<Socials.GitHub to={"https://github.com/petarzarkov/rn-impossible-quiz"} />}
-        content={<ExternalLink to={"https://github.com/petarzarkov/rn-impossible-quiz"} text={"repo"} />}
-      />,
-    ],
-    previewImg: "images/impQuiz.jpg"
-  },
+ 
 ];

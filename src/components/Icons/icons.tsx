@@ -113,4 +113,6 @@ export const CiLibs = {
   BitBucket: { icon: () => <Icon as={SiBitbucket} w={10} h={10} color={"blue.800"} />, level: 4 },
   Confluence: { icon: () => <Icon as={SiConfluence} w={10} h={10} color={"blue.600"} />, level: 4 },
   Jira: { icon: () => <Icon as={SiJira} w={10} h={10} color={"blue.600"} />, level: 4 },
+  Axios: { icon: () => <IconLink icon={<Image w={10} src="images/axios_icon.png" />} to={"https://axios-http.com/docs/intro"} />, level: 4 },
+  ReactBootstrap: { icon: () => <IconLink icon={<Image w={10} src="images/ReactBootstrap.png" />} to={"https://react-bootstrap.netlify.app/docs/getting-started/introduction"} />, level: 4 },
 };
