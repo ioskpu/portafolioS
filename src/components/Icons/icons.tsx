@@ -55,6 +55,10 @@ export const Socials = {
   />
 };
 
+export const Icons = {
+  Weather: { icon: () => <Image w={10} h={10} color={"blue.800"} src="https://www.freeiconspng.com/uploads/weather-icon-png-2.png" /> },
+};
+
 export const Libs = {
   NodeJS: { icon: () => <IconLink icon={<Icon as={IoLogoNodejs} w={10} h={10} color={"green.600"} />} to={"https://nodejs.org/en/"} />, level: 3 },
   JavaScript: { icon: () => <IconLink icon={<Icon as={SiJavascript} w={10} h={10} color={"#f0db4f"} />} to={"https://developer.mozilla.org/en-US/docs/Web/JavaScript"} />, level: 3 },

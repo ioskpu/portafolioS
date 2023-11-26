@@ -2,6 +2,7 @@ import React, { FC, useEffect, useState } from "react";
 import ReactJson from "react-json-view";
 import { AspectRatio, Spinner, Code, Flex, VStack, Text, Button, Container, useColorModeValue, Box } from "@chakra-ui/react";
 import { Project, Libs, SecondaryLibs, Feature, Socials, ExternalLink, CiLibs } from "@components";
+import {Icons} from "../../components/Icons/icons";
 
 const Trivia: FC = () => {
   const [questions, setQ] = useState<Record<string, unknown>[]>([]);
@@ -127,47 +128,42 @@ export const hobbies = (isFrameLoading: boolean, setFrameLoading: (l: boolean) =
     </AspectRatio>
   },
   {
-    title: "🔥 Hot Utils",
-    subTitle: "npm package",
-    description: "hot-utils npm package - various NodeJS utils with type definition inference",
+    title: "🔥 Weather",
+    subTitle: "Api weather",
+    description: "Nice app made in react to consume the openweather api",
     devStack: [
       <Libs.NodeJS.icon key={"NodeHot"} />,
       <Libs.Typescript.icon key={"TSH"} />,
       <Libs.JavaScript.icon key={"JSH"} />,
-      <SecondaryLibs.npm.icon key={"npmH"} to={"https://www.npmjs.com/package/hot-utils"} />,
+      <SecondaryLibs.npm.icon key={"npmH"} to={"https://github.com/ioskpu/React-weather-app"} />,
       <SecondaryLibs.ESLint.icon key={"EslintH"} />,
       <SecondaryLibs.Jest.icon key={"jesth"} />,
     ],
     features: [
       <Feature
         key={"HotDescription"}
-        icon={<Socials.GitHub to={"https://github.com/petarzarkov/hotstuff/blob/main/README.md"} />}
-        content={<Code>Provides utilities for http requests. Url manipulation and building. Logger. Object utils. Promise utils.</Code>}
+        icon={<Socials.GitHub to={"https://github.com/ioskpu/React-weather-app/blob/main/README.md"} />}
+        content={<Code>Nice app to consume openweathermap.org api</Code>}
       />,
-      <Feature
-        key={"HotRepo"}
-        icon={<Socials.GitHub to={"https://github.com/petarzarkov/hotstuff"} />}
-        content={<ExternalLink to={"https://github.com/petarzarkov/hotstuff"} text={"repo"} />}
-      />,
+      
       <Feature
         key={"npmhot"}
-        icon={<SecondaryLibs.npm.icon to={"https://www.npmjs.com/package/hot-utils"} />}
-        content={<ExternalLink to={"https://www.npmjs.com/package/hot-utils"} text={"npm hot-utils"} />}
+        icon={<Icons.Weather.icon to={"https://react-weather-app-blond.vercel.app/"} />}
+        content={<ExternalLink to={"https://react-weather-app-blond.vercel.app/"} text={"React weather app"} />}
       />
     ],
-    preview: <Flex
-      justify="center"
-      w={"full"}
-      minH={"320px"}
-      alignItems={"center"}
-      backgroundImage={"images/img5.jpg"} rounded={"md"} backgroundSize={"cover"} backgroundRepeat="no-repeat" backgroundPosition={"center"}>
-      <VStack>
-        <a href="https://github.com/petarzarkov/hotstuff/actions/"><img src="https://github.com/petarzarkov/hotstuff/actions/workflows/build.yml/badge.svg?branch=main" alt="Build status" /></a>
-        <a href="https://packagephobia.now.sh/result?p=hot-utils"><img src="https://badgen.net/packagephobia/install/hot-utils" alt="Current version" /></a>
-        <a href="https://www.npmjs.com/package/hot-utils"><img src="https://img.shields.io/npm/v/hot-utils" alt="Install size" /></a>
-        <a href="https://github.com/petarzarkov/hotstuff/blob/main/LICENSE"><img src="https://img.shields.io/github/license/petarzarkov/hotstuff" alt="License" /></a>
-      </VStack>
-    </Flex>
+    preview: <AspectRatio w={400} h={isFrameLoading ? 400 : 600}>
+      <>
+        {isFrameLoading && <Spinner
+          thickness='4px'
+          speed='1.85s'
+          emptyColor='primary.200'
+          color='primary.500'
+          size='xs'
+        />}
+        <iframe src='https://react-weather-app-blond.vercel.app/' style={{ borderRadius: 15 }} onLoad={() => setFrameLoading(false)} scrolling="yes"/>
+      </>
+    </AspectRatio>
   },
  
 ];
