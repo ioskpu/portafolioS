@@ -40,7 +40,7 @@ const Card: FC<
           h={"120px"}
           w={"full"}
           src={
-            "images/dice.jpg"
+            "images/backend.jpg"
           }
           objectFit={"cover"}
         />

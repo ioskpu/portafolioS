@@ -61,30 +61,30 @@ export const Project: FC<{
                 divider={<StackDivider borderColor={useColorModeValue("primary.300", "primary.700")} />}
               >
                 <a href="https://game-over-nine.vercel.app/" target="_blank" rel="noopener noreferrer">
-                <Image
-                  rounded={"md"}
-                  alt={"feature image"}
-                  src={
-                    previewImg || "images/img5.jpg"
-                  }
-                  objectFit={"cover"}
-                />
+                  <Image
+                    rounded={"md"}
+                    alt={"feature image"}
+                    src={
+                      previewImg || "images/img5.jpg"
+                    }
+                    objectFit={"cover"}
+                  />
                 </a>
                 {preview}
               </VStack>
               : preview
             :
             <a href="https://game-over-nine.vercel.app/" target="_blank" rel="noopener noreferrer">
-            <Image
-              rounded={"md"}
-              alt={"feature image"}
-              src={
-                previewImg || "images/slots.png"
-              }
-              objectFit={"cover"}
-            />
+              <Image
+                rounded={"md"}
+                alt={"feature image"}
+                src={
+                  previewImg || "images/slots.png"
+                }
+                objectFit={"cover"}
+              />
             </a>
-            }
+          }
         </Flex>
       </SimpleGrid>
     </Container>
