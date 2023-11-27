@@ -105,7 +105,7 @@ const StatsCard: FC<{
 
 export const Profile: FC = () => {
   const stats = [
-    { stat: "React Native", title: "Expand on", icon: <Libs.ReactNative.icon /> },
+    { stat: "React", title: "Expand on", icon: <Libs.React.icon /> },
     { stat: "Typescript", title: "Expand on", icon: <Libs.Typescript.icon /> },
     { stat: "NodeJS", title: "Expand on", icon: <Libs.NodeJS.icon /> },
   ];
