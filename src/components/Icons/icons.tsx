@@ -56,7 +56,8 @@ export const Socials = {
 };
 
 export const Icons = {
-  Weather: { icon: () => <Image w={10} h={10} color={"blue.800"} src="https://www.freeiconspng.com/uploads/weather-icon-png-2.png" /> },
+  //Weather: { icon: () => <Image w={10} h={10} color={"blue.800"} src="https://www.freeiconspng.com/uploads/weather-icon-png-2.png" /> },
+  Weather: { icon: () => <IconLink icon={<Image w={10} h={10} src="https://www.freeiconspng.com/uploads/weather-icon-png-2.png" />} to={"https://react-weather-app-blond.vercel.app/"} /> },
 };
 
 export const Libs = {

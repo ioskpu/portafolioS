@@ -141,14 +141,14 @@ export const hobbies = (isFrameLoading: boolean, setFrameLoading: (l: boolean) =
     ],
     features: [
       <Feature
-        key={"HotDescription"}
+        key={"WeatherDescription"}
         icon={<Socials.GitHub to={"https://github.com/ioskpu/React-weather-app/blob/main/README.md"} />}
         content={<Code>Nice app to consume openweathermap.org api</Code>}
       />,
-      
+
       <Feature
-        key={"npmhot"}
-        icon={<Icons.Weather.icon to={"https://react-weather-app-blond.vercel.app/"} />}
+        key={"weather"}
+        icon={<Icons.Weather.icon />}
         content={<ExternalLink to={"https://react-weather-app-blond.vercel.app/"} text={"React weather app"} />}
       />
     ],
