@@ -10,10 +10,6 @@ import { Project, Libs, SecondaryLibs, Feature, CiLibs } from "@components";
 import { useThemeProvider } from "@hooks";
 import { CgProfile } from "react-icons/cg";
 
-// const Work: FC = () => {
-//   const [redirectTo, setRedirectTo] = useState<string | null>(null);
-// };
-
 const RoleCard: FC<{ role: string }> = ({ role }) => {
   const { theme } = useThemeProvider();
   return (

@@ -72,7 +72,7 @@ export const hobbies = (isFrameLoading: boolean, setFrameLoading: (l: boolean) =
         icon={<CiLibs.Axios.icon />}
         content={<Text fontWeight={600}>Axios is a JS lib. used to make HTTP requests from nodejs or XMLHttpRequests from the browser and it supports the Promise API that is native to JS ES6</Text>}
       />,
-      
+
     ],
     preview: (
       <AspectRatio w={600} h={isFrameLoading ? 600 : 800}>
