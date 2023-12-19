@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from "react";
-import ReactJson from "react-json-view";
+//import ReactJson from "react-json-view";
 import { AspectRatio, Spinner, Code, Flex, VStack, Text, Button, Container, useColorModeValue, Box } from "@chakra-ui/react";
 import { Project, Libs, SecondaryLibs, Feature, Socials, ExternalLink, CiLibs } from "@components";
 import {Icons} from "../../components/Icons/icons";
@@ -52,7 +52,7 @@ export const hobbies = (isFrameLoading: boolean, setFrameLoading: (l: boolean) =
   {
     title: "❔ Quizinator",
     subTitle: "API",
-    description: "10 random questions to test you are a dummy.",
+    description: "10 preguntas aleatorias para probar que eres humano.",
     devStack: [
       Libs.JavaScript.icon, SecondaryLibs.ESLint.icon, Libs.React.icon, CiLibs.ReactBootstrap.icon
     ].map((devIcon, indx) => React.createElement(devIcon, { key: `${indx}-rocket-dev-stack` })),
