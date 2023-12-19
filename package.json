@@ -23,17 +23,17 @@
     "@emailjs/browser": "^3.4.0",
     "axios": "^1.6.2",
     "formik": "^2.2.9",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
-    "react-router-dom": "^6.2.2",
-    "react18-json-view": "^0.2.6"
+    "react-json-view": "^1.21.3",
+    "react-router-dom": "^6.2.2"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",
     "@types/parse-json": "^4.0.0",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
     "@typescript-eslint/eslint-plugin": "^5.14.0",
     "@typescript-eslint/parser": "^5.14.0",
     "@vitejs/plugin-react": "^1.0.7",
