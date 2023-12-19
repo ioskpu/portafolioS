@@ -4,49 +4,49 @@ import { AspectRatio, Spinner, Code, Flex, VStack, Text, Button, Container, useC
 import { Project, Libs, SecondaryLibs, Feature, Socials, ExternalLink, CiLibs } from "@components";
 import {Icons} from "../../components/Icons/icons";
 
-const Trivia: FC = () => {
-  const [questions, setQ] = useState<Record<string, unknown>[]>([]);
-  const [isLoading, setLoading] = useState(false);
-  const getQuestions = async () => {
-    try {
-      setLoading(true);
-      const raw = await fetch("https://the-trivia-api.com/v2/quizzes", {
-        headers: {
-          Accept: "application/json"
-        }
-      });
-      const items = await raw.json() as { result?: Record<string, unknown>[] };
-      if (items?.result?.length) {
-        setQ(items.result);
-      }
-    } catch (error) {
-      //
-    } finally {
-      setLoading(false);
-    }
-  };
+// const Trivia: FC = () => {
+//   const [questions, setQ] = useState<Record<string, unknown>[]>([]);
+//   const [isLoading, setLoading] = useState(false);
+//   const getQuestions = async () => {
+//     try {
+//       setLoading(true);
+//       const raw = await fetch("https://the-trivia-api.com/v2/quizzes", {
+//         headers: {
+//           Accept: "application/json"
+//         }
+//       });
+//       const items = await raw.json() as { result?: Record<string, unknown>[] };
+//       if (items?.result?.length) {
+//         setQ(items.result);
+//       }
+//     } catch (error) {
+//       //
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
 
-  useEffect(() => {
-    void getQuestions();
-  }, []);
+//   useEffect(() => {
+//     void getQuestions();
+//   }, []);
 
-  return (
-    <Container bgColor={useColorModeValue("primary.300", "primary.700")} borderRadius={10} p={4}>
-      <Button onClick={() => void getQuestions()} isLoading={isLoading} m={5}>New questions</Button>
-      <Box>
-        {isLoading ? <Spinner
-          thickness='4px'
-          speed='1.85s'
-          emptyColor='primary.200'
-          color='primary.500'
-          size='xl'
-        /> : questions.length >= 1 &&
-      <ReactJson src={questions} collapsed={1} theme={"monokai"} displayDataTypes={false} name={"trivia"} style={{ borderRadius: 10 }} />
-        }
-      </Box>
-    </Container>
-  );
-};
+//   return (
+//     <Container bgColor={useColorModeValue("primary.300", "primary.700")} borderRadius={10} p={4}>
+//       <Button onClick={() => void getQuestions()} isLoading={isLoading} m={5}>New questions</Button>
+//       <Box>
+//         {isLoading ? <Spinner
+//           thickness='4px'
+//           speed='1.85s'
+//           emptyColor='primary.200'
+//           color='primary.500'
+//           size='xl'
+//         /> : questions.length >= 1 &&
+//       <ReactJson src={questions} collapsed={1} theme={"monokai"} displayDataTypes={false} name={"trivia"} style={{ borderRadius: 10 }} />
+//         }
+//       </Box>
+//     </Container>
+//   );
+// };
 
 export const hobbies = (isFrameLoading: boolean, setFrameLoading: (l: boolean) => void): (Parameters<typeof Project>[0])[] => [
   {
@@ -65,12 +65,13 @@ export const hobbies = (isFrameLoading: boolean, setFrameLoading: (l: boolean) =
       <Feature
         key={"TrReact"}
         icon={<Libs.React.icon />}
-        content={<Text fontWeight={600}>React: a JavaScript library for building user interfaces</Text>}
+        content={<Text fontWeight={600}>React: Una biblioteca de JavaScript para construir interfaces de usuario</Text>}
       />,
       <Feature
         key={"TrAxios"}
         icon={<CiLibs.Axios.icon />}
-        content={<Text fontWeight={600}>Axios is a JS lib. used to make HTTP requests from nodejs or XMLHttpRequests from the browser and it supports the Promise API that is native to JS ES6</Text>}
+        content={<Text fontWeight={600}>Axios es una libreria de Javascript. Se utiliza para realizar solicitudes HTTP desde NodeJs o XMLHTTPRequests 
+        desde el navegador y admite la API de promesa que es nativa de JS ES6</Text>}
       />,
 
     ],
@@ -92,7 +93,7 @@ export const hobbies = (isFrameLoading: boolean, setFrameLoading: (l: boolean) =
   {
     title: "💫 Quotes App",
     subTitle: "API",
-    description: "NodeJS + Knex + simple html, developed to display inspirational quotes",
+    description: "NodeJS + KNEX + HTML, desarrollado para mostrar citas inspiradoras",
     devStack: [
       <Libs.NodeJS.icon key={"NodeW"} />,
       <Libs.JavaScript.icon key={"JSW"} />,
@@ -111,7 +112,8 @@ export const hobbies = (isFrameLoading: boolean, setFrameLoading: (l: boolean) =
       <Feature
         key={"NodeJSQuotes"}
         icon={<Libs.NodeJS.icon />}
-        content={<Text fontWeight={600}>NodeJS: used to create server-side web applications, and it is perfect for data-intensive applications since it uses an asynchronous, event-driven mode</Text>}
+        content={<Text fontWeight={600}>NodeJS: se usa para crear aplicaciones web del lado del servidor, y es perfecto para los datos intensivos en los datos
+        Aplicaciones ya que usa un modo asincrónico y basado en eventos</Text>}
       />
     ],
     preview: <AspectRatio w={400} h={isFrameLoading ? 400 : 600}>
@@ -130,7 +132,7 @@ export const hobbies = (isFrameLoading: boolean, setFrameLoading: (l: boolean) =
   {
     title: "🔥 Weather",
     subTitle: "Api weather",
-    description: "Nice app made in react to consume the openweather api",
+    description: "Aplicación hecha en React para consumir la API OpenWeather",
     devStack: [
       <Libs.NodeJS.icon key={"NodeHot"} />,
       <Libs.Typescript.icon key={"TSH"} />,
@@ -143,7 +145,7 @@ export const hobbies = (isFrameLoading: boolean, setFrameLoading: (l: boolean) =
       <Feature
         key={"WeatherDescription"}
         icon={<Socials.GitHub to={"https://github.com/ioskpu/React-weather-app/blob/main/README.md"} />}
-        content={<Code>Nice app to consume openweathermap.org api</Code>}
+        content={<Code>API para consumir los datos de OpenWeathermap.org</Code>}
       />,
 
       <Feature
