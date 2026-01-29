@@ -48,5 +48,20 @@
     "featured": true,
     "id": "3",
     "createdAt": "2026-01-29T10:10:00.000Z"
+  },
+  {
+    "title": "Taller Pro",
+    "description": "Taller Pro - Sistema de Gestión para Talleres\nTaller Pro es un sistema SaaS de gestión integral para talleres de reparación (principalmente de dispositivos electrónicos/celulares), desarrollado con React + TypeScript + Vite y conectado a Supabase como backend.\nFuncionalidades principales:\nÓrdenes de reparación: Seguimiento completo desde recepción hasta entrega\nPunto de Venta (POS): Ventas, facturación y gestión de pagos\nInventario: Control de stock, repuestos y alertas de bajo inventario\nClientes: Base de datos de clientes con historial\nEmpleados: Gestión de técnicos y personal por tienda",
+    "imageUrl": "https://upwork-usw2-prod-agora-file-storage.s3.us-west-2.amazonaws.com/profile/portfolio/thumbnail/4fce95aab275d574d543d35271988e6b?response-content-disposition=inline%3B%20filename%3D%22image_original%22%3B%20filename%2A%3Dutf-8%27%27image_original&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIETuljPw73xECE28rfRaRWnEKrBbU%2BQ2wss24oiL%2BETrAiEAx2Mv8T9UbZZvuDoESNpvye28SSYZm%2FxgTS38CJBbDyQqmwUIkP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw3Mzk5MzkxNzM4MTkiDHMsYQU3gc%2Fa%2FvQe2yrvBNy%2FDQjD0Pzs7sKiegtA1RQLd4RcK05CfzACmYxRq%2FT97jk9enHhB97c7fUWyKxxusri4jEobQ2xdVpMyUZ3x6tvH9RfxCsE3emryU2%2F9Tm2TaGg%2B4%2BnEKxQ1In77IeGRwg702cGKaCWhCMgiCzm%2FgVc1JFyJmeolQ11UW3ZUOFhMtx5gp8R3ToRRg5rGGxLh7tHGjABZC8rjwfzE5khqGhAElo64PRbJUCbelZZZJWcm7qfBAfFK0X9BaSc2lDDorNG%2FQLENmtliog1cGEYWTI1KSCaYx5YL%2F1kYci5wA%2BBnnZQ5j%2FwLA%2BWacoLqFVHvidSPFP40HED%2FpHv1KZsw8dPKWA4fKrHH4lx%2FcuJIjVLJRrakznvJRpVshmYqOTbSa5bF5EYNtHokTuWBz4GQJtzNjHXr9z5aA0O4QynSbcK%2F7ArJTayvUcX%2BX%2F1wLzN19t%2BbKqlOvnltPw2FpHB6swo1RbWx1Ba22GCKrYZqMAddSquCNLMtPX9%2Fy7%2FIcwcw18gfpprG5U1dgOl1wTKYMJW04tiULdop59%2BFZaUKKse0dQIieGbdtTUhmK3YKtoFPGLLXmArLiVEJwOllXdO6TujezsHzpyEMx1AHYTnGv8N53FFcC2E%2BeMoCTyAC%2F7kBPvCbFdvGL9VB99219gS6imMNX0MJ4QbQwoCCd20dNyDojbaF3IihKklIOtyT%2BjMN9%2BWtYZd1zi50TMdjOHJ06e1U%2F4PRw9gQmXRNsVK9O1NhrAc7phllrh4u7aGgr3OWrFKLpfn%2BF157slCcDLlenib8zs8vZ7HDU0gbaSk9ez%2B9ukHwablt6QRF0f%2BvY2MJHC78sGOpkBSwcQkmj04TIIIXbPzKppg9M2ngqzBB7Kl%2FPj7HASfABfzm%2BnMbPrMTGj%2BpC6Dpp7naHK2KWPealia1FAvoBdIoFjxAtD2W7kH5GAjINyD21pAfZ5U9wVSMWFPV7s9truDj1GSJkeJb%2FhuQ4SUolTX3693SB9l5OB9k9PJ80hh9kxW2pSQZHYYMYKkUnzn9w7OgQNXGM%2Beozw&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260129T224154Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1799&X-Amz-Credential=ASIA2YR6PYW5ZRIO3ESH%2F20260129%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=eb3ec361b2acb5bc35b3ac7d53263aeab4b95fec4dcb0d87e281ecab0801bc56",
+    "projectUrl": "https://work-shop-two.vercel.app/",
+    "category": "web",
+    "tags": [
+      "React",
+      "TypeScript",
+      "Supabase"
+    ],
+    "featured": false,
+    "id": "wv6i6tjet",
+    "createdAt": "2026-01-29T22:43:14.656Z"
   }
 ]
