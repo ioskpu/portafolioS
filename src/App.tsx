@@ -1,18 +1,25 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Layout } from "@components";
-import { Contact, NotFound, Projects, Skills } from "@screens";
+import Home from "./pages/Home";
+import Dashboard from "./pages/admin/Dashboard";
+import Login from "./pages/admin/Login";
+import { EasterEggButton } from './components/ui/EasterEggButton';
+import { SecretToast } from './components/ui/SecretToast';
+import { useKonamiCode } from './hooks/useKonamiCode';
 
 const App = () => {
+  const { activated } = useKonamiCode();
+
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Projects />} />
-        <Route path="skills" element={<Skills />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Route>
-    </Routes>
+    <>
+      <SecretToast show={activated} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/admin" element={<Dashboard />} />
+        <Route path="/admin/login" element={<Login />} />
+      </Routes>
+      <EasterEggButton />
+    </>
   );
 };
 

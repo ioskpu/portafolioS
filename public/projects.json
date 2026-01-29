@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1",
+    "title": "Decentralized Exchange Explorer",
+    "description": "A real-time dashboard to track liquidity and trades across multiple EVM chains.",
+    "imageUrl": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&auto=format&fit=crop&q=60",
+    "projectUrl": "https://github.com/example/dex-explorer",
+    "tags": ["React", "Ethers.js", "Tailwind", "GraphQL"],
+    "category": "blockchain",
+    "featured": true,
+    "createdAt": "2026-01-29T10:00:00.000Z"
+  },
+  {
+    "id": "2",
+    "title": "Modern Portfolio Template",
+    "description": "A high-performance portfolio template with dark mode, animations, and a built-in admin dashboard.",
+    "imageUrl": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&auto=format&fit=crop&q=60",
+    "projectUrl": "https://github.com/example/portfolio",
+    "tags": ["Vite", "React", "TypeScript", "daisyUI"],
+    "category": "web",
+    "featured": true,
+    "createdAt": "2026-01-29T10:05:00.000Z"
+  },
+  {
+    "id": "3",
+    "title": "DevOps Automation Tool",
+    "description": "CLI tool to automate repository setup and CI/CD pipelines for microservices.",
+    "imageUrl": "https://images.unsplash.com/photo-1667372333374-9d445838090f?w=800&auto=format&fit=crop&q=60",
+    "projectUrl": "https://github.com/example/devops-tool",
+    "tags": ["Node.js", "Commander", "Zod", "GitHub API"],
+    "category": "tool",
+    "featured": false,
+    "createdAt": "2026-01-29T10:10:00.000Z"
+  }
+]
