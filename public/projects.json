@@ -34,17 +34,18 @@
     "createdAt": "2026-01-29T10:05:00.000Z"
   },
   {
-    "title": "Tokenized Poll",
-    "description": "Encuesta tokenizada. Aplicación de votación descentralizada con tokens de gobernanza ERC-20 en Ethereum. Características: \n✅ Votación controlada por tokens (solo los poseedores de GOV pueden votar). \n✅ Poder de voto basado en instantáneas (evita la mezcla de tokens). \n✅ Prevención de doble voto.\n✅ Encuestas con límite de tiempo (1 h - 30 d). \n✅ Votación ponderada (ponderación del voto = saldo de tokens).",
+    "title": "DevOps Automation Tool",
+    "description": "CLI tool to automate repository setup and CI/CD pipelines for microservices.",
     "imageUrl": "https://upwork-usw2-prod-agora-file-storage.s3.us-west-2.amazonaws.com/profile/portfolio/thumbnail/f9cf25d9476e6f2524d55bc340188150?response-content-disposition=inline%3B%20filename%3D%22image_original%22%3B%20filename%2A%3Dutf-8%27%27image_original&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJGMEQCIHbhdQj7XxNkKuZCIUl0JhGr56FX7L6Qvx35MyqlkjSsAiAj0jzG9yw2%2BlLYchxgjhemZ2rYs7pXLeRVZr0%2BgY1pZCqbBQiQ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDczOTkzOTE3MzgxOSIMmVZvzdsHBC9tJYPkKu8EgjjhxBXH1WGTYdslz3lys3qqtEtj8p5VRvKZb31TE17ebqBhBTWK2IHbHhPXXe47rJksnue2DaPVxE9nOCcbVFW5OxrJONCNt1sAgdecPxcnMYKMzkt%2B4aVBwMu8NPBMQ9%2B5ctBEl%2Fp8nxbWME8%2Fm9pw4PnCaWa51lKMK1sZObOnfA16awzn7naOMygAYGWBqhOzVB26yTokJJBdcaKHtAc296J1TguwriBzkCrnzIKKWrEVq30yEUqq5isyCE2viN7lxnOg29XklbH1XMvpwsyOOsHrirxBa67eTOaou4%2BPFMCTOufMfMAXFHVbORRJ6A%2BGMUStbsIdyqpn3vv9z5Ujza8zeH2LJB1LgYnGPkjI3wB14atAKfFw4i12z748J5Kd3S48f3Cso5t4e4A7%2B1WFJd11%2FRNaw8h9MeZ%2Bxc%2B9RmpJVbKHha72Ik3CcRkxthIziscEXVzlVQxHAmwbL2FGRHBZSJYqlQHOsedyOfhngAdy9ilS%2F6KnpVxITL0ngv1EghsI%2BJebdmB9RbY706%2FQC7QqsAVoW%2BlkqUdLJ1Phk6nJo91F9E8z2Gfhg3hDktphD5HmEzqvasLn0EoSBH%2FqeIQ5%2FXV4SzD3xJaBKpO70Yh83ZEIzhP5tfTH%2BmyIe50saBPQeoclL9jDdVN9UubbPZt7rlgQ0Qvs9bEG93GROpmcxEpm%2BfKPhQQLljmUfBhLH39I58QK0KDAArO6VyGvtdDMw7q4HH76AACLTvNPp2u4FGXNv%2BSsY79HMk346ms9Au8FcCbjJIE1bs%2B7UKP43F%2B%2Bp7nzz4EqmwQzZtGZ9EoZwKs5IUFhTm1FNzAw9sHvywY6mgFjTHCFMwPcc3aM3ZJ%2FAn4bNfgb50tu7%2FnFoAejpi8z3dKWUULBfbNOYAa59qmpgemtw6BYnD5%2Bq93bWR%2BzhvDymcgtyCNeIJxyYBDcZgYhpQVdKVoV2%2F7isYX2vx5%2FCUTQSIElpX8x3oJVx95RBQh6NVnBfDqZwzbaii1tQdJ5LA1sWx8JnfUA8RYJhAbawSstku38EfiOE86Q&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260129T223758Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1799&X-Amz-Credential=ASIA2YR6PYW562CFADOQ%2F20260129%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=71bbe141e530bab542e18ed8357aac33e5b00ce2089874ab2e6de61c1fefab1b",
-    "projectUrl": "https://tokenized-poll.vercel.app/",
-    "category": "blockchain",
+    "projectUrl": "https://github.com/example/devops-tool",
+    "category": "tool",
     "tags": [
-      "Next.js",
-      "Solidity",
-      "TypeScript"
+      "Node.js",
+      "Commander",
+      "Zod",
+      "GitHub API"
     ],
-    "featured": true,
+    "featured": false,
     "id": "3",
     "createdAt": "2026-01-29T10:10:00.000Z"
   }
