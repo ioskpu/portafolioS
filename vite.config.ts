@@ -13,20 +13,8 @@ export default defineConfig(({ mode }) => {
       rollupOptions: {
         output: {
           manualChunks: {
-            "react": ["react"],
-            "react-dom": ["react-dom"],
-            "react-router-dom": ["react-router-dom"],
-            "@emailjs/browser": ["@emailjs/browser"],
-            "formik": ["formik"],
-            "@chakra-ui/react": ["@chakra-ui/react"],
-            "@chakra-ui/icons": ["@chakra-ui/icons"],
-            "react-icons": ["react-icons"],
-            "react-icons/si": ["react-icons/si"],
-            "react-icons/bs": ["react-icons/bs"],
-            "react-icons/gr": ["react-icons/gr"],
-            "react-icons/fa": ["react-icons/fa"],
-            "react-icons/fi": ["react-icons/fi"],
-            "react-icons/md": ["react-icons/cg"],
+            "react-vendor": ["react", "react-dom", "react-router-dom"],
+            "ui-vendor": ["lucide-react", "daisyui", "tailwindcss"],
           }
         }
       }
