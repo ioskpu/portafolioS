@@ -60,7 +60,7 @@ const Dashboard = () => {
       setIsFormOpen(false);
       setEditingProject(null);
     } catch (error) {
-      alert('Error al actualizar en GitHub. Verifica tu GITHUB_TOKEN en .env.local');
+      alert('Error al actualizar en GitHub. Verifica tu VITE_GITHUB_TOKEN en las variables de entorno de Vercel');
     } finally {
       setIsLoading(false);
     }
