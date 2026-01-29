@@ -1,15 +1,15 @@
 [
   {
-    "title": "Decentralized Exchange Explorer",
-    "description": "A real-time dashboard to track liquidity and trades across multiple EVM chains.",
+    "title": "RemesaStellar-Airtm",
+    "description": "Este proyecto es una prueba de concepto (PoC) de un sistema de remesas moderno que utiliza la red **Stellar** para facilitar transferencias transfronterizas rápidas y económicas, integrándose eventualmente con **Airtm** para la entrega de fondos.",
     "imageUrl": "https://i.postimg.cc/DwMyVd5x/Screenshot-48.jpg",
-    "projectUrl": "https://github.com/example/dex-explorer",
+    "projectUrl": "https://remesa-stellar-airtm.vercel.app/",
     "category": "blockchain",
     "tags": [
       "React",
-      "Ethers.js",
-      "Tailwind",
-      "GraphQL"
+      "Stellar",
+      "Express",
+      "NodeJS"
     ],
     "featured": true,
     "id": "1",
