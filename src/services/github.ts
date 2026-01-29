@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Project } from '../types/project';
 
 const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN;
-const REPO_OWNER = 'LuisCorales'; // Change this to your username
+const REPO_OWNER = 'ioskpu'; // Change this to your username
 const REPO_NAME = 'portafolioS'; // Change this to your repo name
 const FILE_PATH = 'public/projects.json';
 const FETCH_PATH = '/projects.json';
@@ -33,7 +33,7 @@ export const updateProjectsFile = async (projects: Project[], token: string = GI
     );
 
     // 2. Update the file
-    const content = btoa(JSON.stringify(projects, null, 2));
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(projects, null, 2))));
     await api.put(
       `/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`,
       {

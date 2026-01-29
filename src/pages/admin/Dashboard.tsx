@@ -59,8 +59,10 @@ const Dashboard = () => {
       setProjects(newProjects);
       setIsFormOpen(false);
       setEditingProject(null);
-    } catch (error) {
-      alert('Error al actualizar en GitHub. Verifica tu VITE_GITHUB_TOKEN en las variables de entorno de Vercel');
+    } catch (error: any) {
+      console.error('GitHub Update Error:', error.response?.data || error.message);
+      const errorMsg = error.response?.data?.message || error.message;
+      alert(`Error de GitHub: ${errorMsg}\n\nVerifica:\n1. Que VITE_GITHUB_TOKEN en Vercel sea correcto.\n2. Que el token tenga permisos 'repo'.\n3. Que REPO_OWNER y REPO_NAME en github.ts sean correctos.`);
     } finally {
       setIsLoading(false);
     }
