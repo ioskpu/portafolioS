@@ -22,8 +22,8 @@ const Footer = () => {
               <span>Luis Corales</span>
             </div>
             <p className="text-base-content/70 max-w-xs leading-relaxed">
-              Desarrollador Blockchain Full Stack por crear experiencias digitales excepcionales 
-              y explorar el futuro de la Web3.
+              Desarrollador Blockchain Full Stack creaando experiencias digitales excepcionales 
+              y explorando el futuro de la Web3.
             </p>
           </div>
 

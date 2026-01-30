@@ -135,7 +135,7 @@ const BlockchainSection: React.FC = () => {
               { name: 'IPFS', color: 'bg-orange-500/10 text-orange-600 dark:text-orange-400' },
               { name: 'Polygon', color: 'bg-purple-500/10 text-purple-600 dark:text-purple-400' },
               { name: 'Chainlink', color: 'bg-blue-500/10 text-blue-600 dark:text-blue-400' },
-              { name: 'The Graph', color: 'bg-cyan-500/10 text-cyan-600 dark:text-cyan-400' },
+              { name: 'Stellar', color: 'bg-cyan-500/10 text-cyan-600 dark:text-cyan-400' },
               { name: 'Alchemy', color: 'bg-green-500/10 text-green-600 dark:text-green-400' },
               { name: 'MetaMask', color: 'bg-orange-500/10 text-orange-600 dark:text-orange-400' },
               { name: 'OpenZeppelin', color: 'bg-gray-600/10 text-gray-600 dark:text-gray-400' },

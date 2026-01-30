@@ -187,7 +187,7 @@ const ContactSection: React.FC = () => {
                       <div>
                         <h4 className="font-semibold">Ubicación</h4>
                         <p className="text-base-content/80 mt-1">
-                          Remoto (España)
+                          Remoto (Colombia)
                         </p>
                         <p className="text-sm text-base-content/70 mt-1">
                           Disponible para trabajar en cualquier zona horaria
