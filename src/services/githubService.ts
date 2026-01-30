@@ -1,14 +1,10 @@
-SECCIÓN 6: Configurar GitHub Service para actualización
-Crea src/services/githubService.ts:
-
-typescript
 // Este servicio manejará la actualización del archivo JSON en GitHub
 // Necesitarás un token de acceso personal de GitHub con permisos de repositorio
 
 const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN;
-const REPO_OWNER = 'tu-usuario';
-const REPO_NAME = 'tu-repositorio';
-const FILE_PATH = 'src/data/projects.json';
+const REPO_OWNER = 'ioskpu';
+const REPO_NAME = 'portafolioS';
+const FILE_PATH = 'public/projects.json';
 
 export const updateProjectsFile = async (projects: any[], commitMessage: string) => {
   if (!GITHUB_TOKEN) {
@@ -42,7 +38,7 @@ export const updateProjectsFile = async (projects: any[], commitMessage: string)
         },
         body: JSON.stringify({
           message: commitMessage,
-          content: btoa(JSON.stringify(projects, null, 2)),
+          content: btoa(unescape(encodeURIComponent(JSON.stringify(projects, null, 2)))),
           sha: fileData.sha,
           branch: 'main'
         })
@@ -55,7 +51,7 @@ export const updateProjectsFile = async (projects: any[], commitMessage: string)
       const error = await updateResponse.json();
       return { success: false, error: error.message };
     }
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error updating GitHub file:', error);
     return { success: false, error: error.message };
   }

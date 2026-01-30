@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from '../components/layout/Layout';
 import Hero from '../components/sections/Hero';
-import Projects from '../components/sections/Projects';
-import Blockchain from '../components/sections/Blockchain';
+import ProjectsSection from '../components/sections/ProjectsSection';
+import BlockchainSection from '../components/sections/BlockchainSection';
 import Contact from '../components/sections/Contact';
+import { useAppDispatch } from '../store/hooks';
+import { fetchProjects } from '../store/slices/projectsSlice';
 
 const Home = () => {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(fetchProjects());
+  }, [dispatch]);
+
   return (
     <Layout>
       <Hero />
-      <Projects />
-      <Blockchain />
+      <ProjectsSection />
+      <BlockchainSection />
       <Contact />
     </Layout>
   );
