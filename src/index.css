@@ -9,7 +9,8 @@
   --color-blockchain-cyan: #06B6D4;
   --color-blockchain-emerald: #10B981;
 
-  --animate-fade-in: fadeIn 0.3s ease-in-out;
+  --animate-fade-in: fadeIn 0.5s ease-in-out;
+  --animate-slide-up: slideUp 0.3s ease-out;
   --animate-float: float 6s ease-in-out infinite;
   --animate-float-slow: float 8s ease-in-out infinite;
   --animate-float-reverse: float 7s ease-in-out infinite reverse;
@@ -24,14 +25,13 @@
   --breakpoint-2xl: 1536px;
 
   @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    0% { transform: translateY(10px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
   }
 
   @keyframes float {

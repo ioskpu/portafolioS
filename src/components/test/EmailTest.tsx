@@ -1,8 +1,3 @@
-PASO 6: Probar la funcionalidad
-Crea un componente de prueba para verificar EmailJS:
-
-tsx
-// src/components/test/EmailTest.tsx
 import React, { useState } from 'react';
 import { sendContactEmail } from '../../services/emailService';
 

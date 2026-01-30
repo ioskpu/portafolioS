@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Dashboard from "./pages/admin/Dashboard";
 import Login from "./pages/admin/Login";
+import ContactSection from './components/sections/ContactSection';
 import { EasterEggButton } from './components/ui/EasterEggButton';
 import { SecretToast } from './components/ui/SecretToast';
 import { useKonamiCode } from './hooks/useKonamiCode';
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/admin" element={<Dashboard />} />
         <Route path="/admin/login" element={<Login />} />
       </Routes>
+      <ContactSection />
       <EasterEggButton />
     </>
   );
