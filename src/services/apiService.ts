@@ -1,4 +1,10 @@
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api'; 
+const getApiUrl = () => {
+  const url = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+  // Asegurar que termine en /api
+  return url.endsWith('/api') ? url : `${url}/api`;
+};
+
+const API_BASE_URL = getApiUrl(); 
  
  const getAuthToken = () => { 
    return localStorage.getItem('adminToken'); 
