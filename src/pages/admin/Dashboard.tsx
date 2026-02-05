@@ -9,7 +9,7 @@ import ProjectTable from '../../components/admin/ProjectTable';
 import ProjectForm from '../../components/admin/ProjectForm';
 import { useAppSelector, useAppDispatch } from '../../store/hooks';
 import { fetchProjects, deleteProject } from '../../store/slices/projectsSlice';
-import { updateProjectsFile, getProjects } from '../../services/github';
+import { projectService } from '../../services/apiService';
 import { Project } from '../../types/project';
 
 const Dashboard: React.FC = () => {
@@ -68,11 +68,10 @@ const Dashboard: React.FC = () => {
     if (window.confirm('¿Estás seguro de eliminar este proyecto?')) {
       setIsSyncing(true);
       try {
-        const newProjects = projects.filter(p => p.id !== id);
-        await updateProjectsFile(newProjects);
+        await projectService.delete(id);
         dispatch(deleteProject(id));
       } catch (error) {
-        alert('Error al eliminar en GitHub.');
+        alert('Error al eliminar el proyecto.');
       } finally {
         setIsSyncing(false);
       }
@@ -97,25 +96,18 @@ const Dashboard: React.FC = () => {
   const handleFormSubmit = async (data: any) => {
     setIsSyncing(true);
     try {
-      let newProjects;
       if (editingProject) {
-        newProjects = projects.map(p => p.id === editingProject.id ? { ...data, id: p.id, createdAt: p.createdAt } : p);
+        await projectService.update(editingProject.id, data);
       } else {
-        const newProject = {
-          ...data,
-          id: Math.random().toString(36).substr(2, 9),
-          createdAt: new Date().toISOString()
-        };
-        newProjects = [...projects, newProject];
+        await projectService.create(data);
       }
       
-      await updateProjectsFile(newProjects);
       await dispatch(fetchProjects()).unwrap();
       setShowForm(false);
       setEditingProject(null);
     } catch (error: any) {
-      console.error('GitHub Update Error:', error.response?.data || error.message);
-      alert(`Error al actualizar en GitHub: ${error.message}`);
+      console.error('API Error:', error.message);
+      alert(`Error al guardar el proyecto: ${error.message}`);
     } finally {
       setIsSyncing(false);
     }
@@ -152,7 +144,7 @@ const Dashboard: React.FC = () => {
               <button 
                 onClick={handleSync}
                 className="btn btn-ghost btn-sm gap-2"
-                title="Sincronizar con GitHub"
+                title="Sincronizar con la API"
                 disabled={isSyncing}
               >
                 <RefreshCw size={16} className={isSyncing ? 'animate-spin' : ''} />

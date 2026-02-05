@@ -1,21 +1,27 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { Lock, LogIn, ArrowLeft } from 'lucide-react';
+import { authService } from '../../services/apiService';
 
 const Login = () => {
   const [password, setPassword] = React.useState('');
   const [error, setError] = React.useState('');
+  const [loading, setLoading] = React.useState(false);
   const navigate = useNavigate();
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simple logic: check against hardcoded password and store a "token"
-    if (password === 'admin123') {
-      const mockToken = btoa('admin:' + Date.now());
-      localStorage.setItem('admin_token', mockToken);
+    setError('');
+    setLoading(true);
+
+    try {
+      const response = await authService.login(password);
+      localStorage.setItem('adminToken', response.token);
       navigate('/admin');
-    } else {
-      setError('Contraseña incorrecta');
+    } catch (err: any) {
+      setError(err.message || 'Error al iniciar sesión');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -47,8 +53,9 @@ const Login = () => {
 
           {error && <p className="text-error text-sm text-center font-medium">{error}</p>}
 
-          <button type="submit" className="btn btn-primary w-full gap-2">
-            Entrar <LogIn size={18} />
+          <button type="submit" className="btn btn-primary w-full gap-2" disabled={loading}>
+            {loading ? <span className="loading loading-spinner loading-sm"></span> : 'Entrar'}
+            {!loading && <LogIn size={18} />}
           </button>
         </form>
 

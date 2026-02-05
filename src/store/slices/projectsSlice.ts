@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'; 
 import { Project } from '../../types/project'; 
+import { projectService } from '../../services/apiService';
 
 interface ProjectsState { 
   projects: Project[]; 
@@ -16,9 +17,7 @@ const initialState: ProjectsState = {
 export const fetchProjects = createAsyncThunk( 
   'projects/fetchProjects', 
   async () => { 
-    const response = await fetch('/projects.json'); 
-    const data = await response.json(); 
-    return data; 
+    return await projectService.getAll(); 
   } 
 ); 
 

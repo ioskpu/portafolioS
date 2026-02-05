@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { Project } from '../../types/project';
-import { X, Save, Search } from 'lucide-react';
+import { X, Save, Search, ImageIcon } from 'lucide-react';
 import { FloatingLabelInput } from '../ui/FloatingLabelInput';
+import ImageUploader from './ImageUploader';
 
 const projectSchema = z.object({
   title: z.string().min(3, 'El título debe tener al menos 3 caracteres'),
   description: z.string().min(10, 'La descripción debe tener al menos 10 caracteres'),
-  imageUrl: z.string().url('Debe ser una URL válida'),
+  imageUrl: z.string().url('Debe ser una URL válida o subir una imagen'),
   projectUrl: z.string().url('Debe ser una URL válida'),
   category: z.enum(['web', 'blockchain', 'tool']),
   tags: z.string(),
@@ -29,7 +30,6 @@ const SUGGESTED_TAGS = ['React', 'TypeScript', 'Solidity', 'Node.js', 'Ethereum'
 const ProjectForm: React.FC<ProjectFormProps> = ({ project, onSubmit, onCancel }) => {
   const [tagInput, setTagInput] = useState('');
   const [suggestedTags, setSuggestedTags] = useState<string[]>([]);
-  const [imagePreview, setImagePreview] = useState('');
 
   const {
     register,
@@ -58,16 +58,7 @@ const ProjectForm: React.FC<ProjectFormProps> = ({ project, onSubmit, onCancel }
     },
   });
 
-  const imageUrl = watch('imageUrl');
   const currentTags = watch('tags');
-
-  useEffect(() => {
-    if (imageUrl && !errors.imageUrl) {
-      setImagePreview(imageUrl);
-    } else {
-      setImagePreview('');
-    }
-  }, [imageUrl, errors.imageUrl]);
 
   const onFormSubmit = (data: ProjectFormData) => {
     const formattedData = {
@@ -164,11 +155,17 @@ const ProjectForm: React.FC<ProjectFormProps> = ({ project, onSubmit, onCancel }
           
           {/* Columna derecha */}
           <div className="space-y-6">
-            <FloatingLabelInput 
-              label="URL de la Imagen"
-              {...register('imageUrl')}
-              error={errors.imageUrl?.message}
-            />
+            <div className="space-y-2">
+              <label className="text-sm font-bold text-primary flex items-center gap-2">
+                <ImageIcon size={16} /> Imagen del Proyecto
+              </label>
+              <ImageUploader 
+                onImageUploaded={(url) => setValue('imageUrl', url, { shouldValidate: true })}
+                currentImage={project?.imageUrl}
+              />
+              {errors.imageUrl && <span className="text-error text-xs block">{errors.imageUrl.message}</span>}
+              <input type="hidden" {...register('imageUrl')} />
+            </div>
             
             <FloatingLabelInput 
               label="URL del Proyecto (GitHub/Demo)"
@@ -201,32 +198,6 @@ const ProjectForm: React.FC<ProjectFormProps> = ({ project, onSubmit, onCancel }
               </label>
               <p className="text-[10px] text-base-content/50 mt-1">Aparecerá en la sección principal del portafolio.</p>
             </div>
-          </div>
-        </div>
-        
-        {/* Vista previa */}
-        <div className="border border-base-300 rounded-xl p-4 bg-base-200/50">
-          <h3 className="font-bold mb-3 text-sm flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
-            Vista previa de imagen
-          </h3>
-          <div className="aspect-video bg-base-200 rounded-lg flex items-center justify-center overflow-hidden border border-base-300 shadow-inner transition-all duration-200 group">
-            {imagePreview ? (
-              <img 
-                src={imagePreview} 
-                alt="Preview" 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-                onError={() => setImagePreview('')}
-              />
-            ) : (
-              <div className="text-center p-6">
-                <div className="mb-2 text-base-content/20 flex justify-center">
-                  <X size={48} />
-                </div>
-                <span className="text-base-content/40 text-sm italic">Sin vista previa disponible</span>
-                <p className="text-[10px] text-base-content/30 mt-1">Ingresa una URL válida arriba</p>
-              </div>
-            )}
           </div>
         </div>
         

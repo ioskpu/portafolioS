@@ -1,0 +1,63 @@
+[
+  {
+    "title": "RemesaStellar-Airtm",
+    "description": "Este proyecto es una prueba de concepto (PoC) de un sistema de remesas moderno que utiliza la red **Stellar** para facilitar transferencias transfronterizas rápidas y económicas, integrándose eventualmente con **Airtm** para la entrega de fondos.",
+    "imageUrl": "https://i.postimg.cc/DwMyVd5x/Screenshot-48.jpg",
+    "projectUrl": "https://remesa-stellar-airtm.vercel.app/",
+    "category": "blockchain",
+    "tags": [
+      "React",
+      "Stellar",
+      "Express",
+      "NodeJS"
+    ],
+    "featured": true,
+    "createdAt": "2026-01-29T10:00:00.000Z"
+  },
+  {
+    "title": "PowFacucet",
+    "description": "Faucet (Grifo) modularizado para cadenas EVM con diferentes métodos de protección (Captcha, Minería, IP, Saldo de Mainnet, Pasaporte Gitcoin y más)",
+    "imageUrl": "https://upwork-usw2-prod-agora-file-storage.s3.us-west-2.amazonaws.com/profile/portfolio/thumbnail/fe69afdaf6fc0c9353ec6ca13d8e4561?response-content-disposition=inline%3B%20filename%3D%22image_original%22%3B%20filename%2A%3Dutf-8%27%27image_original&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMb%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIQD41fxfR2JcfZ8ZWdJG0gAlDNZq9hiezn5yRjC%2BGHiwIwIgFRcX5Bq7HaRi8h%2FSXcK3UhexPLnfcG2Uy%2BHnLonEnNgqmwUIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw3Mzk5MzkxNzM4MTkiDINY4k1Owa9B5T%2FaSyrvBNQ8TtgWaB5A5yb0kkNlkbVX%2FEHEmVfxgcBYH%2FXsL926m8Y0i0o4lT2LAnxWu6NG5RJJ67WFANiQ0FToAulUE%2FDJaFDaCsi%2BIhUtehEVLpC8QN6ntHLFgkcvakBW5u6wGr0A7vPCb35%2Bqrp6RXEvAv33ULKSDVylAVoGrY7O78A4l8THAXrIYK%2FB9pJQJyP%2B3oyQKUFVdgDKIyzvNQq8CPEvEjKE65aenzT6I3RUoIbxOhArACXBfs5fKGKpCv1Antu5IFHnrriFZ%2BpOZn7YmPx%2FcqVzrLMR0ZLgMjHrp7kb4HV4lPJaeRfw3PTtoXT7akodphJtu3Sj4pPscrE6%2FpjJGinMJqd2716gy%2Fc%2BDURjjryxy0OxTFF88xhP73IBWOKUz2h8DM2iLZ8pcX4zzMKP%2BhSUgkh%2Ftiri9ibF4u%2BOuXnmx5xjVpNyZadJOIYTzkJIiI8M22ZnEwtPvNi%2FNzf1aC4siJGxU3kVPyNG5jGfF5QMtpEiNL9%2Fz8UqSOpQSP5QT0Dj4K8rIAdpi31ip2mxX4%2BBvjBoywFvsUueJW99yIo%2FRqiF1Ex7mw09RmjzxTk%2F%2BAAsFcLBabPSmk%2F4Al1SX%2BBkAIEYvgHZzua8mRU70GYgyvf6U%2BFFC%2FKBf%2FVr1Udbtgqr9P1%2Fw%2Fs%2FXQjS3IhAe7hu1a9OWTy%2FDbFFOSOW4pg4D06veOrHVuNQ9tWpEzm%2FBOrgEfLg0iZpR0Zr%2B%2BikuNeBtIDQX1qyUoFhTw46JmBUEl09eOhJLVwIA51mtupB7SnL5HsEclEZAAaT5yjlx0SCKqAiWJ%2FsyMAjKHo%2ByL6Prqn3bgcVJXR%2BU%2BsUMLCo78sGOpkBB3qLMEdC0duEtKmCvbcEQi0tnh64Z9mgHzgAJSSzV%2F8cxlwTYP6HWyRMSMdovrmGhE3ea3IHj1aZM6b4rqUudMa6o3wfIJnCxQi7wPKSm8PH%2BxjcMt5zr34uFHmP4QS6jz3jejyWP4EmnDLDItwuddJr2UV4K%2ByborHCj%2BvG7AercZPm3HLMZnbTGT1ItIRHMTnyXk8IQGqA&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260129T221742Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1799&X-Amz-Credential=ASIA2YR6PYW5RULOWNKN%2F20260129%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=8967073f4d2620b5bb861140e1c881ca67781a9cf8bff36bae7aa409212d8e79",
+    "projectUrl": "https://powfaucet-production.up.railway.app/",
+    "category": "blockchain",
+    "tags": [
+      "Node",
+      "Web3",
+      "js",
+      "Webpack",
+      "TypeScript",
+      "Mocha"
+    ],
+    "featured": true,
+    "createdAt": "2026-01-29T10:05:00.000Z"
+  },
+  {
+    "title": "DevOps Automation Tool",
+    "description": "CLI tool to automate repository setup and CI/CD pipelines for microservices.",
+    "imageUrl": "https://upwork-usw2-prod-agora-file-storage.s3.us-west-2.amazonaws.com/profile/portfolio/thumbnail/f9cf25d9476e6f2524d55bc340188150?response-content-disposition=inline%3B%20filename%3D%22image_original%22%3B%20filename%2A%3Dutf-8%27%27image_original&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJGMEQCIHbhdQj7XxNkKuZCIUl0JhGr56FX7L6Qvx35MyqlkjSsAiAj0jzG9yw2%2BlLYchxgjhemZ2rYs7pXLeRVZr0%2BgY1pZCqbBQiQ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDczOTkzOTE3MzgxOSIMmVZvzdsHBC9tJYPkKu8EgjjhxBXH1WGTYdslz3lys3qqtEtj8p5VRvKZb31TE17ebqBhBTWK2IHbHhPXXe47rJksnue2DaPVxE9nOCcbVFW5OxrJONCNt1sAgdecPxcnMYKMzkt%2B4aVBwMu8NPBMQ9%2B5ctBEl%2Fp8nxbWME8%2Fm9pw4PnCaWa51lKMK1sZObOnfA16awzn7naOMygAYGWBqhOzVB26yTokJJBdcaKHtAc296J1TguwriBzkCrnzIKKWrEVq30yEUqq5isyCE2viN7lxnOg29XklbH1XMvpwsyOOsHrirxBa67eTOaou4%2BPFMCTOufMfMAXFHVbORRJ6A%2BGMUStbsIdyqpn3vv9z5Ujza8zeH2LJB1LgYnGPkjI3wB14atAKfFw4i12z748J5Kd3S48f3Cso5t4e4A7%2B1WFJd11%2FRNaw8h9MeZ%2Bxc%2B9RmpJVbKHha72Ik3CcRkxthIziscEXVzlVQxHAmwbL2FGRHBZSJYqlQHOsedyOfhngAdy9ilS%2F6KnpVxITL0ngv1EghsI%2BJebdmB9RbY706%2FQC7QqsAVoW%2BlkqUdLJ1Phk6nJo91F9E8z2Gfhg3hDktphD5HmEzqvasLn0EoSBH%2FqeIQ5%2FXV4SzD3xJaBKpO70Yh83ZEIzhP5tfTH%2BmyIe50saBPQeoclL9jDdVN9UubbPZt7rlgQ0Qvs9bEG93GROpmcxEpm%2BfKPhQQLljmUfBhLH39I58QK0KDAArO6VyGvtdDMw7q4HH76AACLTvNPp2u4FGXNv%2BSsY79HMk346ms9Au8FcCbjJIE1bs%2B7UKP43F%2B%2Bp7nzz4EqmwQzZtGZ9EoZwKs5IUFhTm1FNzAw9sHvywY6mgFjTHCFMwPcc3aM3ZJ%2FAn4bNfgb50tu7%2FnFoAejpi8z3dKWUULBfbNOYAa59qmpgemtw6BYnD5%2Bq93bWR%2BzhvDymcgtyCNeIJxyYBDcZgYhpQVdKVoV2%2F7isYX2vx5%2FCUTQSIElpX8x3oJVx95RBQh6NVnBfDqZwzbaii1tQdJ5LA1sWx8JnfUA8RYJhAbawSstku38EfiOE86Q&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260129T223758Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1799&X-Amz-Credential=ASIA2YR6PYW562CFADOQ%2F20260129%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=71bbe141e530bab542e18ed8357aac33e5b00ce2089874ab2e6de61c1fefab1b",
+    "projectUrl": "https://github.com/example/devops-tool",
+    "category": "tool",
+    "tags": [
+      "Node.js",
+      "Commander",
+      "Zod",
+      "GitHub API"
+    ],
+    "featured": true,
+    "createdAt": "2026-01-29T10:10:00.000Z"
+  },
+  {
+    "title": "Taller Pro",
+    "description": "Taller Pro - Sistema de Gestión para Talleres\nTaller Pro es un sistema SaaS de gestión integral para talleres de reparación (principalmente de dispositivos electrónicos/celulares), desarrollado con React + TypeScript + Vite y conectado a Supabase como backend.\nFuncionalidades principales:\nÓrdenes de reparación: Seguimiento completo desde recepción hasta entrega\nPunto de Venta (POS): Ventas, facturación y gestión de pagos\nInventario: Control de stock, repuestos y alertas de bajo inventario\nClientes: Base de datos de clientes con historial\nEmpleados: Gestión de técnicos y personal por tienda",
+    "imageUrl": "https://upwork-usw2-prod-agora-file-storage.s3.us-west-2.amazonaws.com/profile/portfolio/thumbnail/4fce95aab275d574d543d35271988e6b?response-content-disposition=inline%3B%20filename%3D%22image_original%22%3B%20filename%2A%3Dutf-8%27%27image_original&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIETuljPw73xECE28rfRaRWnEKrBbU%2BQ2wss24oiL%2BETrAiEAx2Mv8T9UbZZvuDoESNpvye28SSYZm%2FxgTS38CJBbDyQqmwUIkP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw3Mzk5MzkxNzM4MTkiDHMsYQU3gc%2Fa%2FvQe2yrvBNy%2FDQjD0Pzs7sKiegtA1RQLd4RcK05CfzACmYxRq%2FT97jk9enHhB97c7fUWyKxxusri4jEobQ2xdVpMyUZ3x6tvH9RfxCsE3emryU2%2F9Tm2TaGg%2B4%2BnEKxQ1In77IeGRwg702cGKaCWhCMgiCzm%2FgVc1JFyJmeolQ11UW3ZUOFhMtx5gp8R3ToRRg5rGGxLh7tHGjABZC8rjwfzE5khqGhAElo64PRbJUCbelZZZJWcm7qfBAfFK0X9BaSc2lDDorNG%2FQLENmtliog1cGEYWTI1KSCaYx5YL%2F1kYci5wA%2BBnnZQ5j%2FwLA%2BWacoLqFVHvidSPFP40HED%2FpHv1KZsw8dPKWA4fKrHH4lx%2FcuJIjVLJRrakznvJRpVshmYqOTbSa5bF5EYNtHokTuWBz4GQJtzNjHXr9z5aA0O4QynSbcK%2F7ArJTayvUcX%2BX%2F1wLzN19t%2BbKqlOvnltPw2FpHB6swo1RbWx1Ba22GCKrYZqMAddSquCNLMtPX9%2Fy7%2FIcwcw18gfpprG5U1dgOl1wTKYMJW04tiULdop59%2BFZaUKKse0dQIieGbdtTUhmK3YKtoFPGLLXmArLiVEJwOllXdO6TujezsHzpyEMx1AHYTnGv8N53FFcC2E%2BeMoCTyAC%2F7kBPvCbFdvGL9VB99219gS6imMNX0MJ4QbQwoCCd20dNyDojbaF3IihKklIOtyT%2BjMN9%2BWtYZd1zi50TMdjOHJ06e1U%2F4PRw9gQmXRNsVK9O1NhrAc7phllrh4u7aGgr3OWrFKLpfn%2BF157slCcDLlenib8zs8vZ7HDU0gbaSk9ez%2B9ukHwablt6QRF0f%2BvY2MJHC78sGOpkBSwcQkmj04TIIIXbPzKppg9M2ngqzBB7Kl%2FPj7HASfABfzm%2BnMbPrMTGj%2BpC6Dpp7naHK2KWPealia1FAvoBdIoFjxAtD2W7kH5GAjINyD21pAfZ5U9wVSMWFPV7s9truDj1GSJkeJb%2FhuQ4SUolTX3693SB9l5OB9k9PJ80hh9kxW2pSQZHYYMYKkUnzn9w7OgQNXGM%2Beozw&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260129T224154Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1799&X-Amz-Credential=ASIA2YR6PYW5ZRIO3ESH%2F20260129%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=eb3ec361b2acb5bc35b3ac7d53263aeab4b95fec4dcb0d87e281ecab0801bc56",
+    "projectUrl": "https://work-shop-two.vercel.app/",
+    "category": "web",
+    "tags": [
+      "React",
+      "TypeScript",
+      "Supabase"
+    ],
+    "featured": false,
+    "createdAt": "2026-01-29T22:43:14.656Z"
+  }
+]
