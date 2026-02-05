@@ -48,6 +48,7 @@ const Login = () => {
               className="input input-bordered w-full focus:input-primary" 
               placeholder="••••••••"
               required
+              autoComplete="current-password"
             />
           </div>
 

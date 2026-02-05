@@ -8,7 +8,7 @@ import {
 import ProjectTable from '../../components/admin/ProjectTable';
 import ProjectForm from '../../components/admin/ProjectForm';
 import { useAppSelector, useAppDispatch } from '../../store/hooks';
-import { fetchProjects, deleteProject } from '../../store/slices/projectsSlice';
+import { fetchProjects, deleteProjectAsync } from '../../store/slices/projectsSlice';
 import { projectService } from '../../services/apiService';
 import { Project } from '../../types/project';
 
@@ -68,10 +68,9 @@ const Dashboard: React.FC = () => {
     if (window.confirm('¿Estás seguro de eliminar este proyecto?')) {
       setIsSyncing(true);
       try {
-        await projectService.delete(id);
-        dispatch(deleteProject(id));
-      } catch (error) {
-        alert('Error al eliminar el proyecto.');
+        await dispatch(deleteProjectAsync(id)).unwrap();
+      } catch (error: any) {
+        alert(`Error al eliminar el proyecto: ${error}`);
       } finally {
         setIsSyncing(false);
       }

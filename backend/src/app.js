@@ -24,7 +24,7 @@ const connectDB = async () => {
     await mongoose.connect(process.env.MONGODB_URI);
     console.log('✅ MongoDB conectado');
   } catch (err) {
-    console.error('❌ Error MongoDB:', err.message);
+    console.error('❌ Error MongoDB:', err);
     // No cerramos el proceso para permitir reintentos o depuración
   }
 };

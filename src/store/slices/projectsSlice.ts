@@ -16,18 +16,26 @@ const initialState: ProjectsState = {
 
 export const fetchProjects = createAsyncThunk( 
   'projects/fetchProjects', 
-  async () => { 
-    return await projectService.getAll(); 
+  async (_, { rejectWithValue }) => { 
+    try {
+      return await projectService.getAll(); 
+    } catch (error: any) {
+      return rejectWithValue(error.message);
+    }
   } 
 ); 
 
-export const updateProject = createAsyncThunk( 
-  'projects/updateProject', 
-  async (project: Project) => { 
-    // En producción, aquí iría la llamada a la API de GitHub 
-    return project; 
-  } 
-); 
+export const deleteProjectAsync = createAsyncThunk(
+  'projects/deleteProject',
+  async (id: string, { rejectWithValue }) => {
+    try {
+      await projectService.delete(id);
+      return id;
+    } catch (error: any) {
+      return rejectWithValue(error.message);
+    }
+  }
+);
 
 const projectsSlice = createSlice({ 
   name: 'projects', 
@@ -35,9 +43,6 @@ const projectsSlice = createSlice({
   reducers: { 
     addProject: (state, action: PayloadAction<Project>) => { 
       state.projects.push(action.payload); 
-    }, 
-    deleteProject: (state, action: PayloadAction<string>) => { 
-      state.projects = state.projects.filter(p => p.id !== action.payload); 
     }, 
   }, 
   extraReducers: (builder) => { 
@@ -49,12 +54,15 @@ const projectsSlice = createSlice({
         state.loading = false; 
         state.projects = action.payload; 
       }) 
-      .addCase(fetchProjects.rejected, (state, action) => { 
+      .addCase(fetchProjects.rejected, (state, action: any) => { 
         state.loading = false; 
-        state.error = action.error.message || 'Error loading projects'; 
+        state.error = action.payload || 'Error loading projects'; 
+      })
+      .addCase(deleteProjectAsync.fulfilled, (state, action: PayloadAction<string>) => {
+        state.projects = state.projects.filter(p => p.id !== action.payload);
       }); 
   }, 
 }); 
 
-export const { addProject, deleteProject } = projectsSlice.actions; 
+export const { addProject } = projectsSlice.actions; 
 export default projectsSlice.reducer; 
