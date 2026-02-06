@@ -4,11 +4,11 @@ import { Link, Shield, Lock, Zap, Database, Cpu } from 'lucide-react';
 const BlockchainSection: React.FC = () => {
   const blockchainProjects = [
     {
-      title: "DeFi Dashboard",
-      description: "Monitorización en tiempo real de protocolos DeFi",
-      tech: ["Solidity", "Web3.js", "React", "GraphQL"],
-      status: "Live",
-      link: "#"
+      title: "Mini-Web3-Game-Economy",
+      description: "A minimal Web3 ecosystem with NFTs, rarity-weighted staking, and an ERC-20 reward token.",
+      tech: ["Solidity", "Web3.js", "React", "ERC-20"],
+      status: "In Development",
+      link: "https://github.com/ioskpu/Mini-Web3-Game-Economy"
     },
     {
       title: "NFT Marketplace",
