@@ -19,8 +19,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "tsc --noEmit && eslint -c .eslintrc.js --ext .ts,.tsx ./src --max-warnings 0",
-    "lint:fix": "npm run lint --fix",
-    "preinstall": "node preinstall.js"
+    "lint:fix": "npm run lint --fix"
   },
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
